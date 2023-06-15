@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --bg-color: #232020;
+  --bg-sidebar: #292929;
+  --bg-block: #2d2a2a;
+  --bg-button: #404040;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: white;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

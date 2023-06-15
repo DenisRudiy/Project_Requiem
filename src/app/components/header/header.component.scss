@@ -1,0 +1,40 @@
+@import "../../../styles.scss";
+
+.header {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: var(--bg-sidebar);
+  overflow-x: hidden;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  .logo {
+    width: 200px;
+    height: 60px;
+    background-color: var(--bg-button);
+  }
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    button {
+      background-color: var(--bg-button);
+      color: white;
+      border: none;
+      width: 150px;
+      height: 40px;
+      margin: 40px;
+      cursor: pointer;
+    }
+  }
+}
