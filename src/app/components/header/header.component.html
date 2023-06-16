@@ -1,9 +1,33 @@
+<button class="openHeader" (click)="OpenHeader()">
+  <img src="https://i.postimg.cc/kGxbZy5P/icons8-menu-96.png" alt="" />
+</button>
+<div class="overlay hidden"></div>
+
 <div class="header">
-  <div class="logo"></div>
+  <div class="exitBtn hidden">
+    <button (click)="ExitHeader()">
+      <img src="https://i.postimg.cc/htST20yR/icons8-close-96.png" alt="" />
+    </button>
+  </div>
+  <div class="logo">
+    <img src="https://i.postimg.cc/sX9HJL8d/Requiem.png" alt="" />
+  </div>
+  <div class="space"></div>
   <div class="navigation">
-    <button routerLink="main">Home</button>
-    <button routerLink="allManga">All Manga</button>
-    <button>Achievement</button>
-    <button>Account</button>
+    <button routerLink="main" class="navBtn-1">
+      <img src="https://i.postimg.cc/tTxkrMMC/icons8-home-96.png" alt="" />
+    </button>
+    <button routerLink="allManga" class="navBtn-2">
+      <img
+        src="https://i.postimg.cc/BvyNB0NV/icons8-circled-menu-96.png"
+        alt=""
+      />
+    </button>
+    <button class="navBtn-3">
+      <img src="https://i.postimg.cc/JzpptJXm/icons8-books-96.png" alt="" />
+    </button>
+    <button class="navBtn-4">
+      <img src="https://i.postimg.cc/1z4JFt0F/icons8-account-96.png" alt="" />
+    </button>
   </div>
 </div>
