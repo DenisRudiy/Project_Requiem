@@ -123,8 +123,16 @@
 .show {
   display: flex;
 }
-
+.header-show {
+  opacity: 1;
+  animation: header-show 0.2s;
+}
+.header-hidden {
+  animation: header-hide 0.2s;
+  opacity: 0;
+}
 .hidden {
+  opacity: 0;
   display: none;
 }
 
@@ -152,5 +160,27 @@
         }
       }
     }
+  }
+}
+
+@keyframes header-show {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes header-hide {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
   }
 }

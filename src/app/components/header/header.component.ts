@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
     header!.classList.remove('hidden');
     exitBtn!.classList.remove('hidden');
     overlay!.classList.remove('hidden');
-    header!.classList.add('show');
+    header!.classList.add('header-show');
     overlay!.classList.add('show');
     exitBtn!.classList.add('show');
   }
@@ -48,12 +48,16 @@ export class HeaderComponent implements OnInit {
     const exitBtn = (<HTMLElement>this.el.nativeElement).querySelector(
       '.exitBtn'
     );
-    header!.classList.remove('show');
+    header!.classList.remove('header-show');
     exitBtn!.classList.remove('show');
     overlay!.classList.remove('show');
-    header!.classList.add('hidden');
+    header!.classList.add('header-hidden');
     overlay!.classList.add('hidden');
     exitBtn!.classList.add('hidden');
+    setTimeout(function () {
+      header!.classList.remove('header-hidden');
+      header!.classList.add('hidden');
+    }, 400);
   }
 
   ngOnInit(): void {
@@ -62,7 +66,7 @@ export class HeaderComponent implements OnInit {
     );
     this.screenWidth = window.innerWidth;
     if (this.screenWidth <= 1500) {
-      header!.classList.remove('show');
+      header!.classList.remove('header-show');
       header!.classList.add('hidden');
     }
   }
@@ -77,13 +81,13 @@ export class HeaderComponent implements OnInit {
       '.overlay'
     );
     if (this.screenWidth <= 1500) {
-      header!.classList.remove('show');
+      header!.classList.remove('header-show');
       header!.classList.add('hidden');
       overlay!.classList.remove('show');
       overlay!.classList.add('hidden');
     } else if (this.screenWidth > 1500) {
       header!.classList.remove('hidden');
-      header!.classList.add('show');
+      header!.classList.add('header-show');
       overlay!.classList.remove('show');
       overlay!.classList.add('hidden');
     }
