@@ -1,9 +1,101 @@
-@import "../../../../styles.scss";
+@import "src/styles.scss";
 
 .six-titles {
   margin-top: 50px;
   width: 100%;
-  height: 690px;
+  height: 28vw;
   background-color: var(--bg-block);
   border-radius: 10px;
+
+  .titles {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .manga {
+      border-radius: 10px;
+      transition: 0.2s all;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(11.5vw + 20px);
+        height: calc(17vw + 40px);
+        background-color: none;
+        border-radius: 10px;
+        transition: 0.3s all;
+        animation-duration: 0.3s;
+        cursor: pointer;
+        flex-direction: column;
+        color: var(--bg-block);
+
+        img {
+          width: 11.5vw;
+          height: 17vw;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        p {
+          margin: 0;
+          margin-top: 5px;
+          user-select: none;
+        }
+      }
+      .overlay:hover {
+        background-color: white;
+      }
+      .overlay:active {
+        transform: translateY(20px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1500px) {
+  .six-titles {
+    height: 82vw;
+    padding-top: 40px;
+
+    .titles {
+      grid-template-columns: 32% 32% 32%;
+      .manga {
+        .overlay {
+          width: calc(20.5vw + 20px);
+          height: calc(32vw + 40px);
+          img {
+            width: 20.5vw;
+            height: 32vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .six-titles {
+    height: 440vw;
+    width: 100%;
+    .titles {
+      grid-template-columns: 80%;
+      gap: 20px;
+      .manga {
+        .overlay {
+          width: calc(40vw + 20px);
+          height: calc(60vw + 40px);
+          img {
+            width: 40vw;
+            height: 60vw;
+          }
+        }
+      }
+    }
+  }
 }

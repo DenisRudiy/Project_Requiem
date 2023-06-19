@@ -1,0 +1,100 @@
+{
+  "titles": [
+    {
+      "id": 1,
+      "name": "Bleach",
+      "img": "https://m.media-amazon.com/images/M/MV5BODFmYTUwYzMtM2M2My00NGExLWIzMDctYmRjNTNhZDc4MGI2XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg",
+      "genre": "shonen, action, supernatural ",
+      "rating": 97,
+      "toms": 74,
+      "description": "Bleach: Thousand-Year Blood War (BLEACH 千年血戦篇, Burīchi: Sennen Kessen-hen), also known as Bleach: The Blood Warfare, is a Japanese manga series by Tite Kubo and a direct sequel to the Bleach anime series.",
+      "author": "Tite Kubo",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Attack on Titan",
+      "img": "https://flxt.tmsimg.com/assets/p10701949_b_v9_ah.jpg",
+      "genre": "seinen, action, war drama, fantasy, action",
+      "rating": 98,
+      "toms": 34,
+      "description": "Attack on Titan (Japanese: 進撃の巨人 Hepburn: Shingeki no Kyojin, lit. “The Attack Titan”) is a Japanese manga series both written and illustrated by Hajime Isayama. It is set in a fantasy world where humanity lives within territories surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans. ",
+      "author": "Hajime Isayama",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "One Piece",
+      "img": "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg",
+      "genre": "shonen, action, supernatural, pirates, adventure",
+      "rating": 98,
+      "toms": 105,
+      "description": "One Piece is a Japanese shonen manga series written and illustrated by Eiichiro Oda. It was first published in July 1997 and it hasn’t looked back since. One Piece became a fan-favorite manga series soon after its debut and its market domination was so overwhelming that it affected the sales of other series.",
+      "author": "Eiichiro Oda",
+      "status": "ongoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Berserk",
+      "img": "https://m.media-amazon.com/images/I/91D07epNE9L._AC_UF1000,1000_QL80_.jpg",
+      "genre": "seinen, dark-fantasy, supernatural, action, drama",
+      "rating": 41,
+      "toms": 74,
+      "description": "Berserk (Japanese: ベルセルク, Hepburn: Beruseruku) is a Japanese manga series written and illustrated by Kentaro Miura. Set in a medieval Europe-inspired dark fantasy world, the story centers on the characters of Guts, a lone swordsman, and Griffith, the leader of a mercenary band called the \"Band of the Hawk\".",
+      "author": "Kentaro Miura",
+      "status": "ongoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Hunter X Hunter",
+      "img": "https://m.media-amazon.com/images/M/MV5BNGM0YTk3MWEtN2JlZC00ZmZmLWIwMDktZTMxZGE5Zjc2MGExXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
+      "genre": "shonen, action, supernatural, drama ",
+      "rating": 98,
+      "toms": 37,
+      "description": "Hunter x Hunter (stylized as HUNTERxHUNTER and pronounced \"hunter hunter\") is a Japanese manga series written and illustrated by Yoshihiro Togashi. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March 1998, although the manga has frequently gone on extended hiatuses since 2006.",
+      "author": "Yoshihiro Togashi",
+      "status": "ongoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Bleach",
+      "img": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974725120/one-punch-man-vol-23-9781974725120_hr.jpg",
+      "genre": "shonen, heroes, supernatural, action ",
+      "rating": 90,
+      "toms": 28,
+      "description": "One-Punch Man (ワンパンマン Wanpanman) is a Japanese webcomic, manga, and anime series created by ONE. The webcomic started in July 2009, garnering more than 7.9 million total & 20,000 daily views by June 2012;[1][2] and 186 million as of October 2022. Sheuisha's Young Jump Next picked up the series, as well as commissioned Yusuke Murata, (known for Eyeshield 21) to draw the series with the original writer, ONE. ",
+      "author": "ONE",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    }
+  ]
+}

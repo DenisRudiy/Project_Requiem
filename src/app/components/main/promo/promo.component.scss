@@ -36,7 +36,7 @@
           cursor: pointer;
         }
         input {
-          width: 50vw;
+          width: 40vw;
           height: 60px;
           border-radius: 0px 10px 10px 0px;
           padding-left: 20px;
@@ -97,6 +97,15 @@
   animation: icon-bounce 0.2s;
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+  .promo {
+    .promo_logo {
+      img {
+        width: 34vw;
+      }
+    }
+  }
+}
 @media only screen and (min-width: 320px) and (max-width: 1200px) {
   .promo {
     flex-direction: column;

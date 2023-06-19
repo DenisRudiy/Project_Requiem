@@ -1,1 +1,13 @@
-<div class="six-titles"></div>
+<div class="six-titles">
+  <div class="titles">
+    <div class="manga" *ngFor="let manga of allManga">
+      <div class="overlay">
+        <img src="{{ manga.img }}" alt="" />
+
+        <p style="text-transform: uppercase; font-weight: 700">
+          <i class="pi pi-book"></i> Start Reading
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
