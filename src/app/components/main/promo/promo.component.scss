@@ -1,18 +1,80 @@
-@import "../../../../styles.scss";
+@import "src/styles.scss";
 
 .promo {
   height: 650px;
   width: 100%;
-  background-color: var(--bg-block);
   border-radius: 10px;
   display: flex;
   gap: 10px;
 
   .promo_info {
-    background-color: azure;
     width: 100%;
     height: 100%;
     border-radius: 10px;
+
+    .find_bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+
+      .find {
+        width: 43vw;
+        height: 60px;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+
+        .find_icon {
+          width: 3vw;
+          min-width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--bg-button);
+          border-radius: 10px 0px 0px 10px;
+          cursor: pointer;
+        }
+        input {
+          width: 50vw;
+          height: 60px;
+          border-radius: 0px 10px 10px 0px;
+          padding-left: 20px;
+          font-size: 18px;
+          font-family: "Rubik", sans-serif;
+          color: white;
+          background-color: var(--bg-block);
+          outline: none;
+          border: none;
+        }
+      }
+    }
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      margin-top: 50px;
+      height: 80%;
+
+      img {
+        width: 24vw;
+      }
+
+      .statistic {
+        display: flex;
+        gap: 20px;
+
+        .feedback {
+          color: var(--bg-feedback);
+        }
+      }
+
+      .description {
+        width: 60%;
+      }
+    }
   }
 
   .promo_logo {
@@ -28,5 +90,46 @@
       height: auto;
       border-radius: 10px;
     }
+  }
+}
+
+.bounce {
+  animation: icon-bounce 0.2s;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1200px) {
+  .promo {
+    flex-direction: column;
+    .promo_info {
+      .find_bar {
+        .find {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .promo {
+    .promo_logo {
+      img {
+        margin-top: 30px;
+        width: 60vw;
+        height: auto;
+      }
+    }
+  }
+}
+
+@keyframes icon-bounce {
+  1% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
