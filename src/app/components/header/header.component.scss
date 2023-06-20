@@ -66,15 +66,11 @@
 
       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
         rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      transition: 0.2s all;
+      transition: 0.3s all;
       img {
         width: 20px;
         height: auto;
       }
-    }
-    button:active {
-      transform: scale(1.05);
-      transform: translateY(10px);
     }
   }
 
@@ -106,18 +102,22 @@
       cursor: pointer;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
         rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      transition: 0.2s all;
+      transition: 0.3s all;
 
       img {
         width: 35px;
         height: 35px;
       }
     }
-    button:active {
-      transform: scale(1.05);
-      transform: translateY(10px);
-    }
   }
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+button:active {
+  transform: scale(1.05);
+  transform: translateY(10px);
 }
 
 .show {

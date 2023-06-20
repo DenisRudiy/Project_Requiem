@@ -1,9 +1,58 @@
-@import "../../../styles.scss";
+@import "src/styles.scss";
 
 .footer {
   width: 100%;
-  height: 150px;
+  height: 250px;
   margin-top: 50px;
   background-color: var(--bg-block);
   border-radius: 10px 10px 0px 0px;
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+
+  .part {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  ul {
+    list-style-type: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+
+      img {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        transition: 0.3s all;
+        cursor: pointer;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+
+      img:active {
+        transform: translateY(10px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1100px) {
+  .footer {
+    width: 100%;
+    height: 550px;
+    margin-top: 50px;
+    background-color: var(--bg-block);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
