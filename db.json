@@ -21,7 +21,7 @@
       "name": "Attack on Titan",
       "img": "https://flxt.tmsimg.com/assets/p10701949_b_v9_ah.jpg",
       "genre": "seinen, action, war drama, fantasy, action",
-      "rating": 98,
+      "rating": 99,
       "toms": 34,
       "description": "Attack on Titan (Japanese: 進撃の巨人 Hepburn: Shingeki no Kyojin, lit. “The Attack Titan”) is a Japanese manga series both written and illustrated by Hajime Isayama. It is set in a fantasy world where humanity lives within territories surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans. ",
       "author": "Hajime Isayama",
@@ -82,13 +82,205 @@
     },
     {
       "id": 6,
-      "name": "Bleach",
+      "name": "One-Punch Man",
       "img": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974725120/one-punch-man-vol-23-9781974725120_hr.jpg",
       "genre": "shonen, heroes, supernatural, action ",
       "rating": 90,
       "toms": 28,
       "description": "One-Punch Man (ワンパンマン Wanpanman) is a Japanese webcomic, manga, and anime series created by ONE. The webcomic started in July 2009, garnering more than 7.9 million total & 20,000 daily views by June 2012;[1][2] and 186 million as of October 2022. Sheuisha's Young Jump Next picked up the series, as well as commissioned Yusuke Murata, (known for Eyeshield 21) to draw the series with the original writer, ONE. ",
       "author": "ONE",
+      "status": "ongoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Naruto",
+      "img": "https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+      "genre": "shonen, ninjas, drama, fantasy, action ",
+      "rating": 98,
+      "toms": 72,
+      "description": "Naruto[a] is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. The story is told in two parts—the first set in Naruto's pre-teen years, and the second in his teens.",
+      "author": "Masashi Kishimoto",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Death Note",
+      "img": "https://m.media-amazon.com/images/I/71IX1R6kuML._AC_UF1000,1000_QL80_.jpg",
+      "genre": "seinen, thriller, detective, dark-fantasy, drama ",
+      "rating": 99,
+      "toms": 12,
+      "description": "Death Note (stylized in all caps) is a Japanese manga series written by Tsugumi Ohba and illustrated by Takeshi Obata. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from December 2003 to May 2006, with its chapters collected in 12 tankōbon volumes. The story follows Light Yagami, a genius who discovers a mysterious notebook: the \"Death Note\", which belonged to the shinigami Ryuk, and grants the user the supernatural ability to kill anyone whose name is written in its pages.",
+      "author": "Tsugumi Ohba",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Fullmetal Alchemist",
+      "img": "https://flxt.tmsimg.com/assets/p9064324_b_v8_aa.jpg",
+      "genre": "shonen, drama, detective, fantasy, drama ",
+      "rating": 100,
+      "toms": 27,
+      "description": "Fullmetal Alchemist (Japanese: 鋼の錬金術師, Hepburn: Hagane no Renkinjutsushi, lit. \"Alchemist of Steel\") is a Japanese manga series written and illustrated by Hiromu Arakawa. It was serialized in Square Enix's shōnen manga anthology magazine Monthly Shōnen Gangan between July 2001 and June 2010; the publisher later collected the individual chapters into twenty-seven tankōbon volumes. The steampunk world of Fullmetal Alchemist is primarily styled after the European Industrial Revolution. Set in the early 20th century, in a fictional universe in which alchemy is a widely practiced science, the series follows the journey of two alchemist brothers, Edward and Alphonse Elric, who are searching for the philosopher's stone to restore their bodies after a failed attempt to bring their mother back to life using alchemy.",
+      "author": "Hiromu Arakawa",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Chainsaw Man",
+      "img": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974709939/chainsaw-man-vol-1-9781974709939_hr.jpg",
+      "genre": "seinen, action, comedy, dark-fantasy, drama ",
+      "rating": 96,
+      "toms": 14,
+      "description": "Chainsaw Man (Japanese: チェンソーマン, Hepburn: Chensō Man) is a Japanese manga series written and illustrated by Tatsuki Fujimoto. Its first arc was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from December 2018 to December 2020; its second arc began serialization in Shueisha's Shōnen Jump+ online magazine in July 2022. Its chapters have been collected in 14 tankōbon volumes as of April 2023.",
+      "author": "Tatsuki Fujimoto",
+      "status": "ongoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Dr. Stone",
+      "img": "https://www.starcomics.com/files/immagini/fumetti-cover/drstone1-1200px",
+      "genre": "shonen, sciencepop, comedy, drama ",
+      "rating": 95,
+      "toms": 26,
+      "description": "Dr. Stone (stylized as Dr.STONE) is a Japanese manga series written by Riichiro Inagaki and illustrated by the South Korean artist Boichi. It was serialized in Shueisha's Weekly Shōnen Jump from March 2017 to March 2022, with its chapters collected in 26 tankōbon volumes. The story follows Senku Ishigami, a scientific genius who plans to rebuild civilization after humanity was mysteriously petrified for 3,700 years.",
+      "author": "Riichiro Inagaki and Boichi",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Tokyo Ghoul",
+      "img": "https://m.media-amazon.com/images/M/MV5BN2E2OTgzODktMjBhYy00MjJjLWI0OTgtNGYxOGNhMWMxOWE4XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
+      "genre": "seinen, dark-fantasy, drama, action ",
+      "rating": 99,
+      "toms": 14,
+      "description": "Tokyo Ghoul (Japanese: 東京喰種トーキョーグール, Hepburn: Tōkyō Gūru) is a Japanese dark fantasy manga series written and illustrated by Sui Ishida. It was serialized in Shueisha's seinen manga magazine Weekly Young Jump from September 2011 to September 2014, with its chapters collected in 14 tankōbon volumes. The story is set in an alternate version of Tokyo where humans coexist with ghouls, beings who look like humans but can only survive by eating human flesh. Ken Kaneki, is a college student who is transformed into a half-ghoul after an encounter with one of them. He must navigate the complex social and political dynamics between humans and ghouls while struggling to maintain his humanity.",
+      "author": "Sui Ishida",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Monster",
+      "img": "https://i.pinimg.com/originals/b3/0d/6d/b30d6d12155c286edf7aeb7ece9c283d.jpg",
+      "genre": "seinen, detective, drama, thriller ",
+      "rating": 99,
+      "toms": 18,
+      "description": "Monster (stylized in all caps) is a Japanese manga series written and illustrated by Naoki Urasawa. It was published by Shogakukan in their seinen manga magazine Big Comic Original between December 1994 and December 2001, with its chapters collected in 18 tankōbon volumes. The story revolves around Kenzo Tenma, a Japanese surgeon living in Düsseldorf, Germany whose life enters turmoil after getting himself involved with Johan Liebert, one of his former patients, who is revealed to be a dangerous serial killer.",
+      "author": "Naoki Urasawa",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "20th Century Boys",
+      "img": "https://www.lagriffenoire.com/cache/images/product/6b017aed5ea8f1beceb8889b4413de39-0049113-image-9791039103237.jpg",
+      "genre": "seinen, science-fiction, drama, thriller ",
+      "rating": 98,
+      "toms": 22,
+      "description": "20th Century Boys (Japanese: 20世紀少年, Hepburn: Nijusseiki Shōnen) is a Japanese manga series written and illustrated by Naoki Urasawa. It was originally serialized in Shogakukan's seinen manga magazine Big Comic Spirits from 1999 to 2006, with the 249 chapters published into 22 tankōbon volumes. A 16 chapter continuation, titled 21st Century Boys (21世紀少年, Nijūisseiki Shōnen), ran in the same magazine from 2006 to 2007 and was gathered into two tankōbon volumes. It tells the story of Kenji Endo and his friends, who notice a cult-leader known only as \"Friend\" is out to destroy the world, and it has something to do with their childhood memories. The series makes many references to a number of manga and anime from the 1960s–1970s, as well as to classic rock music, its title being taken from T. Rex's song \"20th Century Boy\".",
+      "author": "Naoki Urasawa",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Vagabond",
+      "img": "https://m.media-amazon.com/images/I/71TY7kJBo9L._AC_UF1000,1000_QL80_.jpg",
+      "genre": "seinen, samurai, drama, thriller, action, dark-fantasy ",
+      "rating": 99,
+      "toms": 38,
+      "description": "Vagabond (Japanese: バガボンド, Hepburn: Bagabondo) is a Japanese epic martial arts manga series written and illustrated by Takehiko Inoue. It portrays a fictionalized account of the life of Japanese swordsman Musashi Miyamoto, based on Eiji Yoshikawa's novel Musashi. It has been serialized in Kodansha's seinen manga magazine Morning since September 1998, with its chapters collected in 37 tankōbon volumes as of July 2014. Viz Media licensed the series for English release in North America and has published the current 37 volumes as of April 2015. The series is currently on an extended hiatus, with the latest chapter released in May 2015.",
+      "author": "Takehiko Inoue",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Vinland Saga",
+      "img": "https://m.media-amazon.com/images/I/91KS3nAZfRL._AC_UF1000,1000_QL80_.jpg",
+      "genre": "seinen, vikings, drama, thriller, action",
+      "rating": 99,
+      "toms": 27,
+      "description": "Vinland Saga (Japanese: ヴィンランド・サガ, Hepburn: Vinrando Saga) is a Japanese historical manga series written and illustrated by Makoto Yukimura. The series is published by Kodansha, and was first serialized in the boys-targeted manga magazine Weekly Shōnen Magazine before moving to the monthly manga magazine Monthly Afternoon, aimed at young adult men. As of May 2022, its chapters have been collected in 26 tankōbon volumes. Vinland Saga has been licensed for English-language publication by Kodansha USA.",
+      "author": "Makoto Yukimura",
+      "status": "ongoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Code Gease",
+      "img": "https://m.media-amazon.com/images/M/MV5BZmUxZmVlNGMtZGMyMy00MmM3LTg5ZjgtNzFhZWU4MTU5MjIwXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
+      "genre": "seinen, alternate history ,science-fiction, mecha, thriller, action",
+      "rating": 98,
+      "toms": 8,
+      "description": "Code Geass: Lelouch of the Rebellion (Japanese: コードギアス 反逆のルルーシュ, Hepburn: Kōdo Giasu: Hangyaku no Rurūshu), often referred to simply as Code Geass, is a Japanese anime television series produced by Sunrise. It was directed by Gorō Taniguchi and written by Ichirō Ōkouchi, with original character designs by Clamp. Set in an alternate timeline, it follows the exiled prince Lelouch vi Britannia, who obtains the \"power of absolute obedience\" from a mysterious woman named C.C. Using this supernatural power, known as Geass, he leads a rebellion against the rule of the Holy Britannian Empire, commanding a series of mecha battles.",
+      "author": "Ichirō Ōkouchi",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "BLAME!",
+      "img": "https://kbimages1-a.akamaihd.net/f8874392-b7c6-4bd1-9553-51f2b8a6be9f/1200/1200/False/blame-vol-10-1.jpg",
+      "genre": "seinen, alternate history ,science-fiction, thriller, action",
+      "rating": 92,
+      "toms": 10,
+      "description": "Blame! (stylized as BLAME!) is a Japanese science fiction manga series written and illustrated by Tsutomu Nihei. It was published by Kodansha in the seinen manga magazine Monthly Afternoon from 1997 to 2003, with its chapters collected in ten tankōbon volumes. A six-part original net animation was produced in 2003, with a seventh episode included on the DVD release. An anime film adaptation by Polygon Pictures was released as a Netflix original in May 2017.",
+      "author": "Tsutomu Nihei",
       "status": "outgoing",
       "parts": [
         {

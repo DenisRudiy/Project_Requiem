@@ -9,6 +9,7 @@ import { MangaService } from 'src/app/services/manga.service';
 })
 export class SixTitlesComponent implements OnInit {
   // init variables
+  page = 1;
   allManga: Manga[] = [];
   constructor(private service: MangaService, private el: ElementRef) {}
 

@@ -1,6 +1,12 @@
 <div class="six-titles">
   <div class="titles">
-    <div class="manga" *ngFor="let manga of allManga">
+    <div
+      class="manga"
+      *ngFor="
+        let manga of allManga
+          | paginate : { itemsPerPage: 6, currentPage: page }
+      "
+    >
       <div class="overlay">
         <img src="{{ manga.img }}" alt="" />
 
@@ -9,6 +15,11 @@
         </p>
       </div>
     </div>
+    <pagination-controls
+      (pageChange)="page = $event"
+      class="paginator"
+      [hidden]="true"
+    ></pagination-controls>
   </div>
   <div class="btn-titles">
     <button>View More</button>

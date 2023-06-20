@@ -1,1 +1,45 @@
-<div class="titles"></div>
+<div class="search_block">
+  <div class="search-field">
+    <div class="find">
+      <div class="find_icon">
+        <i class="pi pi-search" style="font-size: 1.5rem"></i>
+      </div>
+      <input
+        class="search"
+        type="text"
+        placeholder="Find the title"
+        (click)="ClickOnSearch()"
+      />
+    </div>
+  </div>
+  <button class="filters">
+    <img
+      src="https://i.postimg.cc/Jh4KC3vH/icons8-sorting-96.png"
+      alt=""
+    />Sorting
+  </button>
+</div>
+<div class="titles">
+  <div
+    class="manga"
+    *ngFor="
+      let manga of allManga
+        | paginate : { itemsPerPage: countOfTitles, currentPage: page }
+    "
+  >
+    <div class="overlay">
+      <img src="{{ manga.img }}" alt="" />
+
+      <p style="text-transform: uppercase; font-weight: 700">
+        <i class="pi pi-book"></i> Start Reading
+      </p>
+    </div>
+  </div>
+</div>
+<div class="paginations">
+  <pagination-controls
+    (pageChange)="page = $event"
+    class="paginator"
+    [hidden]="false"
+  ></pagination-controls>
+</div>
