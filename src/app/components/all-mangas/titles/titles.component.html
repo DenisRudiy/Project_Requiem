@@ -36,10 +36,11 @@
     </div>
   </div>
 </div>
-<div class="paginations">
+<div class="pagination">
   <pagination-controls
     (pageChange)="page = $event"
     class="paginator"
     [hidden]="false"
+    [maxSize]="maxSizePages"
   ></pagination-controls>
 </div>

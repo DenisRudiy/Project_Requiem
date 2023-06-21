@@ -13,6 +13,7 @@ export class TitlesComponent implements OnInit {
   allManga: Manga[] = [];
   countOfTitles = 12;
   page = 1;
+  maxSizePages = 10;
   constructor(private service: MangaService, private el: ElementRef) {}
 
   ngOnInit(): void {
@@ -22,8 +23,10 @@ export class TitlesComponent implements OnInit {
     this.screenWidth = window.innerWidth;
     if (this.screenWidth <= 1500) {
       this.countOfTitles = 6;
+      this.maxSizePages = 5;
     } else if (this.screenWidth > 1500) {
       this.countOfTitles = 12;
+      this.maxSizePages = 10;
     }
   }
 
@@ -44,8 +47,10 @@ export class TitlesComponent implements OnInit {
     this.screenWidth = window.innerWidth;
     if (this.screenWidth <= 1500) {
       this.countOfTitles = 6;
+      this.maxSizePages = 5;
     } else if (this.screenWidth > 1500) {
       this.countOfTitles = 12;
+      this.maxSizePages = 10;
       if (this.allManga.length % 12 == 0 && this.page !== 1) {
         this.page -= 1;
       }
