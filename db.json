@@ -276,12 +276,76 @@
       "id": 18,
       "name": "BLAME!",
       "img": "https://kbimages1-a.akamaihd.net/f8874392-b7c6-4bd1-9553-51f2b8a6be9f/1200/1200/False/blame-vol-10-1.jpg",
-      "genre": "seinen, alternate history ,science-fiction, thriller, action",
+      "genre": "seinen, alternate history, science-fiction, thriller, action",
       "rating": 92,
       "toms": 10,
       "description": "Blame! (stylized as BLAME!) is a Japanese science fiction manga series written and illustrated by Tsutomu Nihei. It was published by Kodansha in the seinen manga magazine Monthly Afternoon from 1997 to 2003, with its chapters collected in ten tankōbon volumes. A six-part original net animation was produced in 2003, with a seventh episode included on the DVD release. An anime film adaptation by Polygon Pictures was released as a Netflix original in May 2017.",
       "author": "Tsutomu Nihei",
       "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Solo Leveling",
+      "img": "https://st2.myideasoft.com/shop/cd/03/myassets/products/745/81zac67de1s.jpeg?revision=1643824677",
+      "genre": "shonen, heroica ,action, issekai, fantasy",
+      "rating": 86,
+      "toms": 5,
+      "description": "Solo Leveling, also alternatively translated as Only I Level Up (Korean: 나 혼자만 레벨업; RR: Na Honjaman Rebeleop), is a South Korean web novel written by Chugong. It was serialized in Kakao's digital comic and fiction platform KakaoPage beginning on July 25, 2016, and was later published in full by D&C Media under their Papyrus label on November 4, 2016. The novel has been licensed in English by Yen Press.",
+      "author": "Chugong",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Gantz",
+      "img": "https://www.pulsar.ua/files/webp/img_products/full_Gantz-3.webp",
+      "genre": "seinen, action, issekai, science fiction",
+      "rating": 90,
+      "toms": 37,
+      "description": "Gantz (stylized in all caps) is a Japanese manga series written and illustrated by Hiroya Oku. It was serialized in Shueisha's seinen manga magazine Weekly Young Jump from June 2000 to June 2013, with its chapters collected in 37 tankōbon volumes. It tells the story of Kei Kurono and Masaru Kato, both of whom died in a train accident and become part of a semi-posthumous \"game\" in which they and several other recently deceased people are forced to hunt down and kill aliens armed with a handful of futuristic items, equipment, and weaponry.",
+      "author": "Hiroya Oku",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Leviathan",
+      "img": "https://www.manga-news.com/public/images/series/leviathan-deep-water-1-kmics.jpg",
+      "genre": "shonen, science fiction ,action, drama",
+      "rating": 78,
+      "toms": 12,
+      "description": "Leviathan, also known as Deep Sea Water is an outgoing Korean post-apocalypse manhwa written by Lee Gyuntak and illustrated by Noh Miyoung. It is published by Toomics, which also handles its English release. Taking place on a post-apocalyptic aquatic earth a century after a calamity rose the sea levels, Leviathan follows the adventures of siblings Bota and Rita after their father, Teon Ma, sacrificed his life to save them from a sea monster. The two are soon taken in by a woman called Kana, an acquaintance of their deceased father.",
+      "author": "Lee Gyuntak and Noh Miyoung",
+      "status": "outgoing",
+      "parts": [
+        {
+          "p-1": "hello"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Leviathan",
+      "img": "https://m.media-amazon.com/images/M/MV5BMTVlNzM0YjktNjdmNS00MmZmLTk4MjgtOWUyNTQ2MjFiNmU5XkEyXkFqcGdeQXVyODMyNTM0MjM@._V1_FMjpg_UX1000_.jpg",
+      "genre": "shonen, issekai ,action, drama",
+      "rating": 27,
+      "toms": 12,
+      "description": "Sword Art Online (Japanese: ソードアート・オンライン, Hepburn: Sōdo Āto Onrain) is a Japanese light novel series written by Reki Kawahara and illustrated by abec. The series takes place in the then-near future and focuses on protagonists Kazuto \"Kirito\" Kirigaya and Asuna Yuuki as they play through various virtual reality MMORPG worlds. Kawahara originally wrote the series as a web novel on his website from 2002 to 2008. The light novels began publication on ASCII Media Works' Dengeki Bunko imprint from April 10, 2009, with a spin-off series launching in October 2012. The series has spawned twelve manga adaptations published by ASCII Media Works and Kadokawa. The novels and the manga adaptations have been licensed for release in North America by Yen Press.",
+      "author": "Reki Kawahara",
+      "status": "ongoing",
       "parts": [
         {
           "p-1": "hello"
