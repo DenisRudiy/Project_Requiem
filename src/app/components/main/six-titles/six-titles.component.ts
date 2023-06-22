@@ -18,4 +18,10 @@ export class SixTitlesComponent implements OnInit {
       this.allManga = data;
     });
   }
+
+  // init functions
+
+  setManga(manga: Manga) {
+    this.service.setManga(manga);
+  }
 }

@@ -1,1 +1,48 @@
-<p>item-review works!</p>
+<div class="item-review">
+  <img src="{{ currentManga.wallpaper }}" alt="" class="wallpaper" />
+
+  <div class="space"></div>
+  <div class="current_window">
+    <div class="item-detail">
+      <div class="description">
+        <img src="{{ currentManga.img }}" alt="" />
+
+        <div class="text">
+          <h1>{{ currentManga.name }}</h1>
+          <div class="rating">
+            <p class="feedback">{{ currentManga.rating }}% positive feedback</p>
+            <p>{{ currentManga.toms }} toms</p>
+          </div>
+          <p>Status: {{ currentManga.status }}</p>
+          <p>Author: {{ currentManga.author }}</p>
+          <div class="about">
+            <p>{{ currentManga.description }}</p>
+          </div>
+          <button>Start Reading</button>
+        </div>
+      </div>
+
+      <div class="blocks">
+        <div class="preview-block">
+          <div *ngFor="let prev of currentManga.preview">
+            <img src="{{ prev }}" alt="" class="preview" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="same_titles">
+      <h1>Similar Titles</h1>
+      <div class="same_manga_block">
+        <div *ngFor="let same of sameManga" class="same">
+          <div class="overlay">
+            <img src="{{ same.img }}" alt="" class="" />
+            <p style="text-transform: uppercase; font-weight: 700">
+              <i class="pi pi-book"></i> Start Reading
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

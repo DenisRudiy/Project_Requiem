@@ -63,4 +63,8 @@ export class TitlesComponent implements OnInit {
       }
     }
   }
+
+  setManga(manga: Manga) {
+    this.service.setManga(manga);
+  }
 }

@@ -51,26 +51,28 @@ export class HeaderComponent implements OnInit {
   }
 
   ExitHeader() {
-    disableScroll.off();
-    const header = (<HTMLElement>this.el.nativeElement).querySelector(
-      '.header'
-    );
-    const overlay = (<HTMLElement>this.el.nativeElement).querySelector(
-      '.overlay'
-    );
-    const exitBtn = (<HTMLElement>this.el.nativeElement).querySelector(
-      '.exitBtn'
-    );
-    header!.classList.remove('header-show');
-    exitBtn!.classList.remove('show');
-    overlay!.classList.remove('show');
-    header!.classList.add('header-hidden');
-    overlay!.classList.add('hidden');
-    exitBtn!.classList.add('hidden');
-    setTimeout(function () {
-      header!.classList.remove('header-hidden');
-      header!.classList.add('hidden');
-    }, 200);
+    if (this.screenWidth <= 1500) {
+      disableScroll.off();
+      const header = (<HTMLElement>this.el.nativeElement).querySelector(
+        '.header'
+      );
+      const overlay = (<HTMLElement>this.el.nativeElement).querySelector(
+        '.overlay'
+      );
+      const exitBtn = (<HTMLElement>this.el.nativeElement).querySelector(
+        '.exitBtn'
+      );
+      header!.classList.remove('header-show');
+      exitBtn!.classList.remove('show');
+      overlay!.classList.remove('show');
+      header!.classList.add('header-hidden');
+      overlay!.classList.add('hidden');
+      exitBtn!.classList.add('hidden');
+      setTimeout(function () {
+        header!.classList.remove('header-hidden');
+        header!.classList.add('hidden');
+      }, 200);
+    }
   }
 
   ClickOnOverlay() {
@@ -86,16 +88,24 @@ export class HeaderComponent implements OnInit {
     const overlay = (<HTMLElement>this.el.nativeElement).querySelector(
       '.overlay'
     );
+    const exitBtn = (<HTMLElement>this.el.nativeElement).querySelector(
+      '.exitBtn'
+    );
     if (this.screenWidth <= 1500) {
       header!.classList.remove('header-show');
       header!.classList.add('hidden');
       overlay!.classList.remove('show');
       overlay!.classList.add('hidden');
+      exitBtn!.classList.remove('hidden');
+      exitBtn!.classList.add('show');
     } else if (this.screenWidth > 1500) {
       header!.classList.remove('hidden');
       header!.classList.add('header-show');
       overlay!.classList.remove('show');
       overlay!.classList.add('hidden');
+      exitBtn!.classList.remove('show');
+      exitBtn!.classList.add('hidden');
+      disableScroll.off();
     }
   }
 }

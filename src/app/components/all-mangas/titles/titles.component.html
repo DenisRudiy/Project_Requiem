@@ -28,7 +28,12 @@
     "
   >
     <div class="overlay">
-      <img src="{{ manga.img }}" alt="" />
+      <img
+        src="{{ manga.img }}"
+        alt=""
+        routerLink="currentManga"
+        (click)="setManga(manga)"
+      />
 
       <p style="text-transform: uppercase; font-weight: 700">
         <i class="pi pi-book"></i> Start Reading
