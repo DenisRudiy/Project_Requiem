@@ -14,6 +14,7 @@ export class SixTitlesComponent implements OnInit {
   constructor(private service: MangaService, private el: ElementRef) {}
 
   ngOnInit(): void {
+    window.scrollTo(-1000, 0);
     this.service.getAll().subscribe((data) => {
       this.allManga = data;
     });

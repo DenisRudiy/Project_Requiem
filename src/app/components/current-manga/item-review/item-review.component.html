@@ -36,7 +36,13 @@
       <div class="same_manga_block">
         <div *ngFor="let same of sameManga" class="same">
           <div class="overlay">
-            <img src="{{ same.img }}" alt="" class="" />
+            <img
+              src="{{ same.img }}"
+              alt=""
+              class=""
+              routerLink="currentManga"
+              (click)="setManga(same)"
+            />
             <p style="text-transform: uppercase; font-weight: 700">
               <i class="pi pi-book"></i> Start Reading
             </p>

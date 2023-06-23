@@ -19,6 +19,7 @@ export class ItemReviewComponent implements OnInit {
 
   // * OnInit
   ngOnInit(): void {
+    window.scrollTo(-1000, 0);
     const storedManga = localStorage.getItem('chosenManga');
     if (storedManga !== null) {
       this.currentManga = JSON.parse(storedManga);
@@ -48,10 +49,8 @@ export class ItemReviewComponent implements OnInit {
       });
   }
 
-  // setManga(manga: Manga) {
-  //   this.service.setManga(manga);
-  // }
-
-  // routerLink="currentManga"
-  //             (click)="setManga(same)"
+  setManga(manga: Manga) {
+    window.location.reload();
+    this.service.setManga(manga);
+  }
 }

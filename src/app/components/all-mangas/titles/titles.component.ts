@@ -18,6 +18,7 @@ export class TitlesComponent implements OnInit {
   constructor(private service: MangaService, private el: ElementRef) {}
 
   ngOnInit(): void {
+    window.scrollTo(-1000, 0);
     this.service.getAll().subscribe((data) => {
       this.allManga = data;
     });
@@ -66,5 +67,9 @@ export class TitlesComponent implements OnInit {
 
   setManga(manga: Manga) {
     this.service.setManga(manga);
+  }
+
+  scrollToTop() {
+    window.scrollTo(-1000, 0);
   }
 }
