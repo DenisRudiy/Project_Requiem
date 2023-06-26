@@ -1,0 +1,58 @@
+<p-toast></p-toast>
+
+<div class="registration">
+  <div class="close">
+    <button (click)="goBack('user')">
+      <i class="pi pi-arrow-left" style="color: rgb(255, 255, 255)"></i>
+    </button>
+  </div>
+  <div class="content">
+    <div class="logo">
+      <img class="photo" src="{{ photo }}" alt="" />
+      <input type="file" class="input_file" (change)="onFileSelected($event)" />
+    </div>
+    <div class="fields">
+      <div class="inputs">
+        <div class="inp_group">
+          <h4>Name</h4>
+          <input
+            type="text"
+            maxlength="30"
+            class="name"
+            (click)="inputBackUp('name')"
+          />
+        </div>
+        <div class="inp_group">
+          <h4>Email</h4>
+          <input
+            type="text"
+            maxlength="50"
+            class="email"
+            (click)="inputBackUp('email')"
+          />
+        </div>
+        <div class="inp_group">
+          <h4>Password</h4>
+          <input
+            type="password"
+            maxlength="50"
+            class="password1"
+            (click)="inputBackUp('password1')"
+          />
+        </div>
+        <div class="inp_group">
+          <h4>Repeat Password</h4>
+          <input
+            type="password"
+            maxlength="50"
+            class="password2"
+            (click)="inputBackUp('password2')"
+          />
+        </div>
+        <div class="btn_section">
+          <button class="btn" (click)="createUser()">Create account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

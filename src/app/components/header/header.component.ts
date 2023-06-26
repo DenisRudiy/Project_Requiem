@@ -15,6 +15,7 @@ import disableScroll from 'disable-scroll';
 export class HeaderComponent implements OnInit {
   // init variables
   public screenWidth: any;
+  sidebarVisible = false;
   @ViewChild('scrollTarget') scrollTarget!: ElementRef;
 
   constructor(private el: ElementRef) {}
@@ -50,7 +51,7 @@ export class HeaderComponent implements OnInit {
     exitBtn!.classList.add('show');
   }
 
-  ExitHeader() {
+  ExitHeader(open: string) {
     if (this.screenWidth <= 1500) {
       disableScroll.off();
       const header = (<HTMLElement>this.el.nativeElement).querySelector(
@@ -73,10 +74,13 @@ export class HeaderComponent implements OnInit {
         header!.classList.add('hidden');
       }, 200);
     }
+    if (open === 'open') {
+      this.sidebarVisible = true;
+    }
   }
 
   ClickOnOverlay() {
-    this.ExitHeader();
+    this.ExitHeader('');
   }
 
   @HostListener('window:resize', ['$event'])

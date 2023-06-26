@@ -1,0 +1,17 @@
+<div class="userPage" *ngIf="page === 'user'">
+  <div class="userPanel">
+    <img src="https://i.postimg.cc/sX9HJL8d/Requiem.png" alt="" class="logo" />
+    <p>To be able to read manga, you must be logged in.</p>
+    <button (click)="changePage('log')">LogIn</button>
+    or
+    <button (click)="changePage('reg')">Registration</button>
+  </div>
+</div>
+
+<div class="registration" *ngIf="page === 'reg'">
+  <app-registration (BackFunc)="changePage($event)"></app-registration>
+</div>
+
+<div class="login" *ngIf="page === 'log'">
+  <app-login></app-login>
+</div>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
 import { AllMangasComponent } from './components/all-mangas/all-mangas.component';
 import { CurrentMangaComponent } from './components/current-manga/current-manga.component';
+import { UserPageComponent } from './components/user-page/user-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'currentManga', component: CurrentMangaComponent },
   { path: 'allManga', component: AllMangasComponent },
   { path: 'achievement', component: AllMangasComponent },
+  { path: 'userPage', component: UserPageComponent },
 ];
 
 @NgModule({
