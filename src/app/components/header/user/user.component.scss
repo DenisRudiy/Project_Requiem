@@ -51,5 +51,11 @@
     button:active {
       transform: translateY(20px);
     }
+
+    .user_logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
   }
 }

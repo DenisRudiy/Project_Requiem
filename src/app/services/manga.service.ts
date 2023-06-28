@@ -7,10 +7,11 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class MangaService {
-  // init variables
+  // * variables
   url = 'http://localhost:3000/titles';
   private currentManga = new Subject<Manga>();
 
+  // * constructor
   constructor(private http: HttpClient) {
     const chosenManga = localStorage.getItem('chosenManga');
     if (chosenManga) {
@@ -19,12 +20,12 @@ export class MangaService {
     }
   }
 
-  // init functions
-
+  // * CRUD functions
   getAll() {
     return this.http.get<Manga[]>(this.url);
   }
 
+  // * get/set functions
   setManga(manga: Manga) {
     this.currentManga.next(manga);
     localStorage.setItem('chosenManga', JSON.stringify(manga));
