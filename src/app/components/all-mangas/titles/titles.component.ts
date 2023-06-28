@@ -72,4 +72,25 @@ export class TitlesComponent implements OnInit {
   scrollToTop() {
     window.scrollTo(-1000, 0);
   }
+  
+  onInputChange(){
+    const input = this.el.nativeElement.querySelector('.search').value;
+    let names = []
+    for(let j = 0; j < this.allManga.length; j++){
+      let name = ''
+      for(let i = 0; i < input.length; i++){
+        if (this.allManga[j].name[i].toLowerCase() !== input[i].toLowerCase()){
+          name = ''
+          break
+        }
+        name += this.allManga[j].name[i]
+      };
+      if (name !== '') {
+        names.push(this.allManga[j].name)
+      }
+    };
+    console.log(input, names);
+  }
+
+
 }
