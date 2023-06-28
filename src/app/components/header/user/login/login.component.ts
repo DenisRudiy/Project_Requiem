@@ -80,6 +80,8 @@ export class LoginComponent implements OnInit {
             hashPassword1 == this.users[i].password &&
             email.value == this.users[i].email
           ) {
+            this.users[i].status = 'logged';
+            this.service.updateUser(this.users[i]).subscribe((data) => {});
             this.service.setLogUser(this.users[i]);
           }
         }
