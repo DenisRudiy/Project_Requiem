@@ -30,7 +30,6 @@ export class EditComponent implements OnInit {
     const loggedUser = localStorage.getItem('chosenUser');
     if (loggedUser !== null) {
       this.loggedUser = JSON.parse(loggedUser);
-      console.log(this.loggedUser);
     }
   }
 
@@ -96,7 +95,6 @@ export class EditComponent implements OnInit {
         this.loggedUser.email = email.value;
         this.loggedUser.password = hashPassword1;
         this.loggedUser.photo = this.photo;
-        console.log(this.loggedUser);
         this.service.updateUser(this.loggedUser).subscribe((data) => {});
         this.service.setLogUser(this.loggedUser);
         this.goBack('user');

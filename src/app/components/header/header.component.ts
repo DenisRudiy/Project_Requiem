@@ -15,7 +15,7 @@ import disableScroll from 'disable-scroll';
 export class HeaderComponent implements OnInit {
   // init variables
   public screenWidth: any;
-  sidebarVisible = true;
+  sidebarVisible = false;
   @ViewChild('scrollTarget') scrollTarget!: ElementRef;
 
   constructor(private el: ElementRef) {}

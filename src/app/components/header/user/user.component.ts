@@ -29,7 +29,6 @@ export class UserComponent implements OnInit {
     const loggedUser = localStorage.getItem('chosenUser');
     if (loggedUser !== null) {
       this.loggedUser = JSON.parse(loggedUser);
-      console.log(this.loggedUser.status);
       if (this.loggedUser.status == 'logged') {
         this.changeUser('logged_user');
       }
@@ -46,7 +45,6 @@ export class UserComponent implements OnInit {
     this.user = 'none';
     this.loggedUser.status = 'unlogged';
     this.service.updateUser(this.loggedUser).subscribe((data) => {});
-    console.log(this.loggedUser.status);
     localStorage.setItem('chosenUser', JSON.stringify(this.loggedUser));
     this.service.setLogUser(this.loggedUser);
   }

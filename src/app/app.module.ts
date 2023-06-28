@@ -21,11 +21,12 @@ import { PromoComponent } from './components/main/promo/promo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AllMangasComponent } from './components/all-mangas/all-mangas.component';
 import { CurrentMangaComponent } from './components/current-manga/current-manga.component';
-import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserComponent } from './components/header/user/user.component';
 import { RegistrationComponent } from './components/header/user/registration/registration.component';
 import { LoginComponent } from './components/header/user/login/login.component';
 import { EditComponent } from './components/header/user/edit/edit.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { DetailComponent } from './components/profile/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +41,12 @@ import { EditComponent } from './components/header/user/edit/edit.component';
     FooterComponent,
     AllMangasComponent,
     CurrentMangaComponent,
-    UserPageComponent,
     UserComponent,
     RegistrationComponent,
     LoginComponent,
     EditComponent,
+    ProfileComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
