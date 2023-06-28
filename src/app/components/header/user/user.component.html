@@ -23,3 +23,7 @@
 <div class="login" *ngIf="page === 'log'">
   <app-login (BackFunc)="changePage($event)"></app-login>
 </div>
+
+<div class="edit" *ngIf="page === 'edit'">
+  <app-edit (BackFunc)="changePage($event)"></app-edit>
+</div>

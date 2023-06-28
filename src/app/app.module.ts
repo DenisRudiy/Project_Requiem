@@ -25,6 +25,7 @@ import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserComponent } from './components/header/user/user.component';
 import { RegistrationComponent } from './components/header/user/registration/registration.component';
 import { LoginComponent } from './components/header/user/login/login.component';
+import { EditComponent } from './components/header/user/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { LoginComponent } from './components/header/user/login/login.component';
     UserComponent,
     RegistrationComponent,
     LoginComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

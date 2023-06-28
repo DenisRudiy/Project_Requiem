@@ -11,24 +11,44 @@ import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.scss'],
   providers: [MessageService],
 })
-export class LoginComponent implements OnInit {
-  users: User[] = [];
+export class EditComponent implements OnInit {
+  photo!: string;
+  loggedUser: User = new User();
 
   constructor(
+    private service: UserService,
     private el: ElementRef,
-    private messageService: MessageService,
-    private service: UserService
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
-    this.service.getUsers().subscribe((data) => {
-      this.users = data;
-    });
+    const loggedUser = localStorage.getItem('chosenUser');
+    if (loggedUser !== null) {
+      this.loggedUser = JSON.parse(loggedUser);
+      console.log(this.loggedUser);
+    }
+  }
+
+  @Output() BackFunc = new EventEmitter<string>();
+  goBack(page: string) {
+    this.BackFunc.emit(page);
+  }
+
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      const url = e.target.result;
+      sessionStorage.setItem('profileImage', url);
+      this.photo = url;
+      this.loggedUser.photo = this.photo;
+    };
+    reader.readAsDataURL(file);
   }
 
   inputCheck(obj: HTMLInputElement) {
@@ -47,13 +67,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  // @Output() logUser = new EventEmitter<User>();
-  @Output() BackFunc = new EventEmitter<string>();
-  goBack(page: string) {
-    this.BackFunc.emit(page);
-  }
-
-  LogIn() {
+  updateUser() {
+    const name = this.el.nativeElement.querySelector('.name');
     const email = this.el.nativeElement.querySelector('.email');
     const password1 = this.el.nativeElement.querySelector('.password1');
     const password2 = this.el.nativeElement.querySelector('.password2');
@@ -61,10 +76,12 @@ export class LoginComponent implements OnInit {
     const hashPassword2 = SHA256(password2.value).toString();
 
     if (hashPassword1 == hashPassword2) {
+      this.inputCheck(name);
       this.inputCheck(email);
       this.inputCheck(password1);
       this.inputCheck(password2);
       if (
+        name.style.borderColor == 'red' ||
         email.style.borderColor == 'red' ||
         password1.style.borderColor == 'red' ||
         password2.style.borderColor == 'red'
@@ -75,28 +92,14 @@ export class LoginComponent implements OnInit {
           detail: 'Type data in all fields!',
         });
       } else {
-        let log = false;
-        for (let i = 0; i < this.users.length; i++) {
-          if (
-            hashPassword1 == this.users[i].password &&
-            email.value == this.users[i].email
-          ) {
-            this.users[i].status = 'logged';
-            this.service.updateUser(this.users[i]).subscribe((data) => {});
-            this.service.setLogUser(this.users[i]);
-            log = true;
-          }
-        }
-
-        if (log == true) {
-          this.goBack('user');
-        } else {
-          this.messageService.add({
-            severity: 'error',
-            summary: 'Error',
-            detail: 'There is no such user!',
-          });
-        }
+        this.loggedUser.name = name.value;
+        this.loggedUser.email = email.value;
+        this.loggedUser.password = hashPassword1;
+        this.loggedUser.photo = this.photo;
+        console.log(this.loggedUser);
+        this.service.updateUser(this.loggedUser).subscribe((data) => {});
+        this.service.setLogUser(this.loggedUser);
+        this.goBack('user');
       }
     } else {
       password1.style.borderColor = 'red';
