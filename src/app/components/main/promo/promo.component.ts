@@ -82,10 +82,14 @@ export class PromoComponent implements OnInit {
   }
 
   getMangaByName(name: string) {
-    for (let i = 0; i < this.allManga.length; i++) {
-      if (this.allManga[i].name === name) {
-        this.setManga(this.allManga[i]);
-        break;
+    const bodyElement = document.body;
+    if (bodyElement) {
+      bodyElement.style.overflow = 'scroll';
+      for (let i = 0; i < this.allManga.length; i++) {
+        if (this.allManga[i].name === name) {
+          this.setManga(this.allManga[i]);
+          break;
+        }
       }
     }
   }
