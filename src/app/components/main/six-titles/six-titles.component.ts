@@ -8,11 +8,14 @@ import { MangaService } from 'src/app/services/manga.service';
   styleUrls: ['./six-titles.component.scss'],
 })
 export class SixTitlesComponent implements OnInit {
-  // init variables
+  // * variables
   page = 1;
   allManga: Manga[] = [];
+
+  // * constructor
   constructor(private service: MangaService, private el: ElementRef) {}
 
+  // * ngOnInit
   ngOnInit(): void {
     window.scrollTo(-1000, 0);
     this.service.getAll().subscribe((data) => {
@@ -20,8 +23,7 @@ export class SixTitlesComponent implements OnInit {
     });
   }
 
-  // init functions
-
+  // * set manga to redirect
   setManga(manga: Manga) {
     this.service.setManga(manga);
   }

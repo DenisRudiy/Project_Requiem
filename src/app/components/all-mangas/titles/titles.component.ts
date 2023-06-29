@@ -8,7 +8,7 @@ import { MangaService } from 'src/app/services/manga.service';
   styleUrls: ['./titles.component.scss'],
 })
 export class TitlesComponent implements OnInit {
-  // init variables
+  // * variables
   public screenWidth: any;
   allManga: Manga[] = [];
   countOfTitles = 12;
@@ -16,8 +16,11 @@ export class TitlesComponent implements OnInit {
   maxSizePages = 10;
   countOfPages = 1;
   names: string[] = [];
+
+  // * constructor
   constructor(private service: MangaService, private el: ElementRef) {}
 
+  // * ngOnInit
   ngOnInit(): void {
     window.scrollTo(-1000, 0);
     this.service.getAll().subscribe((data) => {
@@ -37,10 +40,14 @@ export class TitlesComponent implements OnInit {
     } else {
       this.countOfPages = this.allManga.length / 12;
     }
+
+    const lastPage = sessionStorage.getItem('lastPage');
+    if (lastPage !== null) {
+      this.page = JSON.parse(lastPage);
+    }
   }
 
-  // init functions
-
+  // * hide header
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
@@ -56,14 +63,18 @@ export class TitlesComponent implements OnInit {
     }
   }
 
+  // * set redirect to current manga page
   setManga(manga: Manga) {
     this.service.setManga(manga);
   }
 
-  scrollToTop() {
+  // * save current page to sessionStorage
+  changePage() {
+    sessionStorage.setItem('lastPage', JSON.stringify(this.page));
     window.scrollTo(-1000, 0);
   }
 
+  // * show search block
   ClickOnSearch() {
     const search = (<HTMLElement>this.el.nativeElement).querySelector(
       '.pi-search'
@@ -86,6 +97,7 @@ export class TitlesComponent implements OnInit {
     }
   }
 
+  // * hide search block
   hideSearch() {
     const result = (<HTMLElement>this.el.nativeElement).querySelector(
       '.result'
@@ -101,6 +113,7 @@ export class TitlesComponent implements OnInit {
     }
   }
 
+  // * search work
   onInputChange() {
     const input = this.el.nativeElement.querySelector('.search').value;
     let names = [];
@@ -120,6 +133,7 @@ export class TitlesComponent implements OnInit {
     this.names = names;
   }
 
+  // * redirect to searched manga
   getMangaByName(name: string) {
     const bodyElement = document.body;
     if (bodyElement) {

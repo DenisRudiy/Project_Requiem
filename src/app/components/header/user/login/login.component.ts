@@ -17,26 +17,31 @@ import { UserService } from 'src/app/services/user.service';
   providers: [MessageService],
 })
 export class LoginComponent implements OnInit {
+  // * variables
   users: User[] = [];
 
+  // * constructor
   constructor(
     private el: ElementRef,
     private messageService: MessageService,
     private service: UserService
   ) {}
 
+  // * ngOnInit
   ngOnInit(): void {
     this.service.getUsers().subscribe((data) => {
       this.users = data;
     });
   }
 
+  // * verify input field
   inputCheck(obj: HTMLInputElement) {
     if (obj.value == '') {
       obj.style.borderColor = 'red';
     }
   }
 
+  // * backup input field
   inputBackUp(className: string) {
     if (
       this.el.nativeElement.querySelector(`.${className}`).style.borderColor ==
@@ -47,12 +52,13 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  // @Output() logUser = new EventEmitter<User>();
+  // * go back
   @Output() BackFunc = new EventEmitter<string>();
   goBack(page: string) {
     this.BackFunc.emit(page);
   }
 
+  // * check user
   LogIn() {
     const email = this.el.nativeElement.querySelector('.email');
     const password1 = this.el.nativeElement.querySelector('.password1');

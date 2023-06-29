@@ -17,15 +17,18 @@ import { UserService } from 'src/app/services/user.service';
   providers: [MessageService],
 })
 export class EditComponent implements OnInit {
+  // * variables
   photo!: string;
   loggedUser: User = new User();
 
+  // * constructor
   constructor(
     private service: UserService,
     private el: ElementRef,
     private messageService: MessageService
   ) {}
 
+  // * ngOnInit
   ngOnInit(): void {
     const loggedUser = localStorage.getItem('chosenUser');
     if (loggedUser !== null) {
@@ -33,11 +36,13 @@ export class EditComponent implements OnInit {
     }
   }
 
+  // * go back
   @Output() BackFunc = new EventEmitter<string>();
   goBack(page: string) {
     this.BackFunc.emit(page);
   }
 
+  // * get file and parse it to url
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
     const reader = new FileReader();
@@ -50,12 +55,14 @@ export class EditComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 
+  // * verify input field
   inputCheck(obj: HTMLInputElement) {
     if (obj.value == '') {
       obj.style.borderColor = 'red';
     }
   }
 
+  // * backup input field
   inputBackUp(className: string) {
     if (
       this.el.nativeElement.querySelector(`.${className}`).style.borderColor ==
@@ -66,6 +73,7 @@ export class EditComponent implements OnInit {
     }
   }
 
+  // * update user
   updateUser() {
     const name = this.el.nativeElement.querySelector('.name');
     const email = this.el.nativeElement.querySelector('.email');

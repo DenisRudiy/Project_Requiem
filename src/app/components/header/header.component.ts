@@ -13,13 +13,15 @@ import disableScroll from 'disable-scroll';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  // init variables
+  // * variables
   public screenWidth: any;
   sidebarVisible = false;
   @ViewChild('scrollTarget') scrollTarget!: ElementRef;
 
+  // * constructor
   constructor(private el: ElementRef) {}
 
+  // * ngOnInit
   ngOnInit(): void {
     const header = (<HTMLElement>this.el.nativeElement).querySelector(
       '.header'
@@ -31,7 +33,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  // init functions
+  // * show header
   OpenHeader() {
     disableScroll.on();
     const header = (<HTMLElement>this.el.nativeElement).querySelector(
@@ -51,6 +53,7 @@ export class HeaderComponent implements OnInit {
     exitBtn!.classList.add('show');
   }
 
+  // * hide header
   ExitHeader(open: string) {
     if (this.screenWidth <= 1500) {
       disableScroll.off();
@@ -79,10 +82,12 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  // * hide header by overlay clicked
   ClickOnOverlay() {
     this.ExitHeader('');
   }
 
+  // * hide/show header by window size
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;

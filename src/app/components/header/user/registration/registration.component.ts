@@ -17,27 +17,32 @@ import { UserService } from 'src/app/services/user.service';
   providers: [MessageService],
 })
 export class RegistrationComponent implements OnInit {
+  // * variables
   photo!: string;
-
   new_user: User = new User();
   users: User[] = [];
+
+  // * constructor
   constructor(
     private el: ElementRef,
     private messageService: MessageService,
     private service: UserService
   ) {}
 
+  // * ngOnInit
   ngOnInit(): void {
     this.service.getUsers().subscribe((data) => {
       this.users = data;
     });
   }
 
+  // * go back
   @Output() BackFunc = new EventEmitter<string>();
   goBack(page: string) {
     this.BackFunc.emit(page);
   }
 
+  // * get file and parse it to url
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
     const reader = new FileReader();
@@ -49,12 +54,14 @@ export class RegistrationComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 
+  // * verify input field
   inputCheck(obj: HTMLInputElement) {
     if (obj.value == '') {
       obj.style.borderColor = 'red';
     }
   }
 
+  // * backup input field
   inputBackUp(className: string) {
     if (
       this.el.nativeElement.querySelector(`.${className}`).style.borderColor ==
@@ -65,6 +72,7 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
+  // * create user
   createUser() {
     const name = this.el.nativeElement.querySelector('.name');
     const email = this.el.nativeElement.querySelector('.email');

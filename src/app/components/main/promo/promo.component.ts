@@ -8,23 +8,26 @@ import { MangaService } from 'src/app/services/manga.service';
   styleUrls: ['./promo.component.scss'],
 })
 export class PromoComponent implements OnInit {
-  // init variables
+  // * variables
   allManga: Manga[] = [];
   names: string[] = [];
+
+  // * constructor
   constructor(private service: MangaService, private el: ElementRef) {}
 
+  // * ngOnInit
   ngOnInit(): void {
     this.service.getAll().subscribe((data) => {
       this.allManga = data;
     });
   }
 
-  // init functions
-
+  // * set redirect to current manga page
   setManga(manga: Manga) {
     this.service.setManga(manga);
   }
 
+  // * show search field
   ClickOnSearch() {
     const search = (<HTMLElement>this.el.nativeElement).querySelector(
       '.pi-search'
@@ -47,6 +50,7 @@ export class PromoComponent implements OnInit {
     }
   }
 
+  // * hide search field
   hideSearch() {
     const result = (<HTMLElement>this.el.nativeElement).querySelector(
       '.result'
@@ -62,6 +66,7 @@ export class PromoComponent implements OnInit {
     }
   }
 
+  // * search work
   onInputChange() {
     const input = this.el.nativeElement.querySelector('.search').value;
     let names = [];
@@ -81,6 +86,7 @@ export class PromoComponent implements OnInit {
     this.names = names;
   }
 
+  // * redirect to searched manga
   getMangaByName(name: string) {
     const bodyElement = document.body;
     if (bodyElement) {

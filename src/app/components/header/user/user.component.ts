@@ -9,10 +9,13 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
+  // * variables
   clickEventSubscription!: Subscription;
   page = 'user';
   user = 'none';
   loggedUser: User = new User();
+
+  // * constructor
   constructor(private service: UserService) {
     this.clickEventSubscription = this.service
       .getLogUser()
@@ -25,6 +28,7 @@ export class UserComponent implements OnInit {
       });
   }
 
+  // * ngOnInit
   ngOnInit(): void {
     const loggedUser = localStorage.getItem('chosenUser');
     if (loggedUser !== null) {
@@ -35,12 +39,17 @@ export class UserComponent implements OnInit {
     }
   }
 
+  // * change page
   changePage(page: string) {
     this.page = page;
   }
+
+  // * change user
   changeUser(user: string) {
     this.user = user;
   }
+
+  // * log out
   LogOut() {
     this.user = 'none';
     this.loggedUser.status = 'unlogged';

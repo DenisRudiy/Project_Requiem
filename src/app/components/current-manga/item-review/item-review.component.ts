@@ -49,6 +49,7 @@ export class ItemReviewComponent implements OnInit {
       });
   }
 
+  // * change manga
   setManga(manga: Manga) {
     window.location.reload();
     this.service.setManga(manga);
