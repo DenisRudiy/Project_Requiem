@@ -1,6 +1,22 @@
 @import "src/styles.scss";
 @import "src/app/components/main/promo/promo.component.scss";
 
+.overlay_blured {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 500%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
 .search_block {
   padding: 10px;
   display: flex;
@@ -10,6 +26,7 @@
   margin-bottom: 50px;
 
   .search-field {
+    z-index: 5;
     .find {
       width: 43vw;
       height: 60px;
@@ -18,8 +35,8 @@
       flex-wrap: nowrap;
 
       .find_icon {
-        width: 3vw;
         min-width: 60px;
+        width: 60px;
         height: 60px;
         display: flex;
         justify-content: center;
@@ -39,6 +56,30 @@
         background-color: var(--bg-block);
         outline: none;
         border: none;
+      }
+      .result {
+        position: absolute;
+        margin-top: 60px;
+        margin-left: 60px;
+        background-color: var(--bg-button);
+        border-radius: 0px 0px 10px 10px;
+        overflow-y: auto;
+        max-height: 195px;
+        width: 38vw;
+        // padding-bottom: 10px;
+        div {
+          width: 40vw;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 10px;
+          transition: 0.2s all;
+        }
+        div:hover {
+          background-color: var(--bg-block);
+        }
+        div:active {
+          transform: translateY(10px);
+        }
       }
     }
   }
@@ -138,7 +179,23 @@
   border-radius: 0px 0px 10px 10px;
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1500px) {
+@media only screen and (min-width: 1100px) and (max-width: 1500px) {
+  .titles {
+    height: 80vw;
+    grid-template-columns: 32% 32% 32%;
+    .manga {
+      .overlay {
+        width: calc(20.5vw + 20px);
+        height: calc(32vw + 40px);
+        img {
+          width: 20.5vw;
+          height: 32vw;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1100px) {
   .titles {
     height: 80vw;
     grid-template-columns: 32% 32% 32%;

@@ -15,6 +15,7 @@ export class TitlesComponent implements OnInit {
   page = 1;
   maxSizePages = 10;
   countOfPages = 1;
+  names: string[] = [];
   constructor(private service: MangaService, private el: ElementRef) {}
 
   ngOnInit(): void {
@@ -40,16 +41,6 @@ export class TitlesComponent implements OnInit {
 
   // init functions
 
-  ClickOnSearch() {
-    const search = (<HTMLElement>this.el.nativeElement).querySelector(
-      '.pi-search'
-    );
-    search!.classList.add('bounce');
-    setTimeout(function () {
-      search!.classList.remove('bounce');
-    }, 200);
-  }
-
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
@@ -72,25 +63,69 @@ export class TitlesComponent implements OnInit {
   scrollToTop() {
     window.scrollTo(-1000, 0);
   }
-  
-  onInputChange(){
-    const input = this.el.nativeElement.querySelector('.search').value;
-    let names = []
-    for(let j = 0; j < this.allManga.length; j++){
-      let name = ''
-      for(let i = 0; i < input.length; i++){
-        if (this.allManga[j].name[i].toLowerCase() !== input[i].toLowerCase()){
-          name = ''
-          break
-        }
-        name += this.allManga[j].name[i]
-      };
-      if (name !== '') {
-        names.push(this.allManga[j].name)
-      }
-    };
-    console.log(input, names);
+
+  ClickOnSearch() {
+    const search = (<HTMLElement>this.el.nativeElement).querySelector(
+      '.pi-search'
+    );
+    const result = (<HTMLElement>this.el.nativeElement).querySelector(
+      '.result'
+    );
+    const overlay = (<HTMLElement>this.el.nativeElement).querySelector(
+      '.overlay_blured'
+    );
+    const bodyElement = document.body;
+    if (bodyElement) {
+      bodyElement.style.overflow = 'hidden';
+      result!.classList.remove('hidden');
+      overlay!.classList.remove('hidden');
+      search!.classList.add('bounce');
+      setTimeout(function () {
+        search!.classList.remove('bounce');
+      }, 200);
+    }
   }
 
+  hideSearch() {
+    const result = (<HTMLElement>this.el.nativeElement).querySelector(
+      '.result'
+    );
+    const overlay = (<HTMLElement>this.el.nativeElement).querySelector(
+      '.overlay_blured'
+    );
+    const bodyElement = document.body;
+    if (bodyElement) {
+      bodyElement.style.overflow = 'scroll';
+      result!.classList.add('hidden');
+      overlay!.classList.add('hidden');
+    }
+  }
 
+  onInputChange() {
+    const input = this.el.nativeElement.querySelector('.search').value;
+    let names = [];
+    for (let j = 0; j < this.allManga.length; j++) {
+      let name = '';
+      for (let i = 0; i < input.length; i++) {
+        if (this.allManga[j].name[i].toLowerCase() !== input[i].toLowerCase()) {
+          name = '';
+          break;
+        }
+        name += this.allManga[j].name[i];
+      }
+      if (name !== '') {
+        names.push(this.allManga[j].name);
+      }
+    }
+    this.names = names;
+  }
+
+  getMangaByName(name: string) {
+    for (let i = 0; i < this.allManga.length; i++) {
+      if (this.allManga[i].name === name) {
+        this.setManga(this.allManga[i]);
+        break;
+      }
+    }
+  }
 }

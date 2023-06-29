@@ -1,3 +1,4 @@
+<div class="overlay_blured hidden" (click)="hideSearch()"></div>
 <div class="search_block">
   <div class="search-field">
     <div class="find">
@@ -11,6 +12,13 @@
         (click)="ClickOnSearch()"
         (input)="onInputChange()"
       />
+      <div class="result hidden">
+        <div *ngFor="let name of names">
+          <div (click)="getMangaByName(name)" routerLink="currentManga">
+            {{ name }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <button class="filters">

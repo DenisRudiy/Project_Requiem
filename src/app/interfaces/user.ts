@@ -4,5 +4,6 @@ export class User {
   email!: string;
   status!: string;
   password!: string;
+  role!: string;
   photo!: string;
 }
