@@ -58,7 +58,7 @@ export class TitlesComponent implements OnInit {
       this.countOfTitles = 12;
       this.maxSizePages = 10;
       if (this.allManga.length % 12 !== this.countOfPages && this.page !== 1) {
-        this.page -= 1;
+        this.page = Math.round(this.allManga.length / 12);
       }
     }
   }
