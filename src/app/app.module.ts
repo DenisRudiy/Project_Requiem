@@ -8,6 +8,8 @@ import { SidebarModule } from 'primeng/sidebar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ToastModule } from 'primeng/toast';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 // components
 import { AppComponent } from './app.component';
@@ -57,6 +59,8 @@ import { DetailComponent } from './components/profile/detail/detail.component';
     BrowserAnimationsModule,
     CommonModule,
     ToastModule,
+    OverlayPanelModule,
+    RadioButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

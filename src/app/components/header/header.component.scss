@@ -31,14 +31,14 @@
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  z-index: 5;
+  z-index: 10;
 }
 
 .header {
   width: 250px;
   height: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   top: 0;
   left: 0;
   display: flex;

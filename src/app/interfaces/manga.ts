@@ -3,7 +3,7 @@ export interface Manga {
   name: string;
   img: string;
   wallpaper: string;
-  genre: string;
+  genre: string[];
   rating: number;
   toms: number;
   description: string;

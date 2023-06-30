@@ -11,6 +11,7 @@ export class TitlesComponent implements OnInit {
   // * variables
   public screenWidth: any;
   allManga: Manga[] = [];
+  sortedManga: Manga[] = [];
   countOfTitles = 12;
   page = 1;
   maxSizePages = 10;
@@ -44,6 +45,13 @@ export class TitlesComponent implements OnInit {
     const lastPage = sessionStorage.getItem('lastPage');
     if (lastPage !== null) {
       this.page = JSON.parse(lastPage);
+    }
+
+    const sortedManga = sessionStorage.getItem('sorting');
+    if (sortedManga !== null) {
+      this.sortedManga = JSON.parse(sortedManga);
+    } else {
+      this.sortedManga = this.allManga;
     }
   }
 
@@ -144,6 +152,46 @@ export class TitlesComponent implements OnInit {
           break;
         }
       }
+    }
+  }
+
+  // * filter manga list
+  filterList(option: string) {
+    if (option === 'all') {
+      this.sortedManga = this.allManga;
+      sessionStorage.setItem('sorting', JSON.stringify(this.sortedManga));
+    } else if (option === 'rating') {
+      let rating: number[] = [];
+      this.sortedManga = [];
+      for (let i = 0; i < this.allManga.length; i++) {
+        rating.push(this.allManga[i].rating);
+      }
+      rating.sort(function (a, b) {
+        if (a > b) return -1;
+        if (a < b) return 1;
+        return 0;
+      });
+      for (let i = 0; i < this.allManga.length; i++) {
+        for (let j = 0; j < this.allManga.length; j++) {
+          if (
+            this.allManga[j].rating === rating[i] &&
+            this.sortedManga.includes(this.allManga[j]) === false
+          ) {
+            this.sortedManga.push(this.allManga[j]);
+            break;
+          }
+        }
+      }
+      sessionStorage.setItem('sorting', JSON.stringify(this.sortedManga));
+    } else {
+      this.sortedManga = [];
+      for (let i = 0; i < this.allManga.length; i++) {
+        if (this.allManga[i].genre.includes(option) === true) {
+          this.sortedManga.push(this.allManga[i]);
+        }
+      }
+      sessionStorage.setItem('sorting', JSON.stringify(this.sortedManga));
+      this.page = 1;
     }
   }
 }

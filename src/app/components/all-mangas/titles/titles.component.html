@@ -21,18 +21,114 @@
       </div>
     </div>
   </div>
-  <button class="filters">
+  <button class="filters" (click)="op.toggle($event)">
     <img
       src="https://i.postimg.cc/Jh4KC3vH/icons8-sorting-96.png"
       alt=""
     />Sorting
   </button>
+  <p-overlayPanel #op>
+    <div class="filter_block">
+      <h4>Sort by genre</h4>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="shonen"
+          class="filt"
+          (click)="filterList('shonen')"
+        />
+        <label for="contactChoice1">Shonen</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="seinen"
+          class="filt"
+          (click)="filterList('seinen')"
+        />
+        <label for="contactChoice1">Seinen</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="action"
+          class="filt"
+          (click)="filterList('action')"
+        />
+        <label for="contactChoice1">Action</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="fantasy"
+          class="filt"
+          (click)="filterList('fantasy')"
+        />
+        <label for="contactChoice1">Fantasy</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="dark-fantasy"
+          class="filt"
+          (click)="filterList('dark-fantasy')"
+        />
+        <label for="contactChoice1">Dark Fantasy</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="detective"
+          class="filt"
+          (click)="filterList('detective')"
+        />
+        <label for="contactChoice1">Detective</label>
+      </div>
+    </div>
+    <div class="filter_block">
+      <h4>Another sorting</h4>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="all"
+          class="filt"
+          (click)="filterList('all')"
+        />
+        <label for="contactChoice1">All</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          value="rating"
+          class="filt"
+          (click)="filterList('rating')"
+        />
+        <label for="contactChoice1">Rating</label>
+      </div>
+    </div>
+  </p-overlayPanel>
 </div>
 <div class="titles">
   <div
     class="manga"
     *ngFor="
-      let manga of allManga
+      let manga of sortedManga
         | paginate : { itemsPerPage: countOfTitles, currentPage: page }
     "
   >

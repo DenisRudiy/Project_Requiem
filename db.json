@@ -5,7 +5,7 @@
       "name": "Bleach",
       "img": "https://m.media-amazon.com/images/M/MV5BODFmYTUwYzMtM2M2My00NGExLWIzMDctYmRjNTNhZDc4MGI2XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg",
       "wallpaper": "https://wallpapers.com/images/featured/ichigo-kurosaki-bilder-4t2ieybhrb5agrn6.jpg",
-      "genre": "shonen, action, supernatural ",
+      "genre": ["shonen", "action", "supernatural"],
       "rating": 97,
       "toms": 74,
       "description": "Bleach: Thousand-Year Blood War (BLEACH 千年血戦篇, Burīchi: Sennen Kessen-hen), also known as Bleach: The Blood Warfare, is a Japanese manga series by Tite Kubo and a direct sequel to the Bleach anime series.",
@@ -17,12 +17,7 @@
         "https://m.media-amazon.com/images/I/91drpJpVp0L._AC_UF1000,1000_QL80_.jpg",
         "https://64.media.tumblr.com/41477ee9a114bf95acb71f1d08944b2c/812bf9eb618e388e-70/s1280x1920/196a295613aab8f40591cd64b77197ce1a8ff88b.jpg"
       ],
-      "sameTitles": [
-        3,
-        5,
-        6,
-        7
-      ],
+      "sameTitles": [3, 5, 6, 7],
       "parts": [
         {
           "p-1": "hello"
@@ -34,7 +29,7 @@
       "name": "Attack on Titan",
       "img": "https://flxt.tmsimg.com/assets/p10701949_b_v9_ah.jpg",
       "wallpaper": "https://rare-gallery.com/mocahbig/1376626-eren-attack-on-titan-aot-anime-final-season-2-4k.jpg",
-      "genre": "seinen, action, war drama, fantasy, action",
+      "genre": ["seinen", "action", "war drama", "fantasy"],
       "rating": 99,
       "toms": 34,
       "description": "Attack on Titan (Japanese: 進撃の巨人 Hepburn: Shingeki no Kyojin, lit. “The Attack Titan”) is a Japanese manga series both written and illustrated by Hajime Isayama. It is set in a fantasy world where humanity lives within territories surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans. ",
@@ -46,12 +41,7 @@
         "https://64.media.tumblr.com/b396d7cb668103be9381107402433fc4/8bf19007c54b435d-4f/s1280x1920/4aa2831520befe9ae07f49b6127828a8dae955c9.jpg",
         "https://i.pinimg.com/originals/34/d0/f7/34d0f7adb61fe24f3fd8e416e9dcbe56.jpg"
       ],
-      "sameTitles": [
-        4,
-        8,
-        12,
-        15
-      ],
+      "sameTitles": [4, 8, 12, 15],
       "parts": [
         {
           "p-1": "hello"
@@ -63,7 +53,7 @@
       "name": "One Piece",
       "img": "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg",
       "wallpaper": "https://wallpaperaccess.com/full/2604448.jpg",
-      "genre": "shonen, action, supernatural, pirates, adventure",
+      "genre": ["shonen", "action", "supernatural", "pirates", "adventure"],
       "rating": 98,
       "toms": 105,
       "description": "One Piece is a Japanese shonen manga series written and illustrated by Eiichiro Oda. It was first published in July 1997 and it hasn’t looked back since. One Piece became a fan-favorite manga series soon after its debut and its market domination was so overwhelming that it affected the sales of other series.",
@@ -75,12 +65,7 @@
         "https://qph.cf2.quoracdn.net/main-qimg-82ec5d5ff08034f2ffdf8d2af6abbd05-pjlq",
         "https://www.animenarrative.com/wp-content/uploads/2023/01/7woHoF3OvN7JIme37ywAiASMrnh2z1WQqfiHb88pLe0-720x1080.webp"
       ],
-      "sameTitles": [
-        1,
-        5,
-        6,
-        7
-      ],
+      "sameTitles": [1, 5, 6, 7],
       "parts": [
         {
           "p-1": "hello"
@@ -92,7 +77,7 @@
       "name": "Berserk",
       "img": "https://m.media-amazon.com/images/I/91D07epNE9L._AC_UF1000,1000_QL80_.jpg",
       "wallpaper": "https://images5.alphacoders.com/764/thumb-1920-764519.jpg",
-      "genre": "seinen, dark-fantasy, supernatural, action, drama",
+      "genre": ["seinen", "dark-fantasy", "supernatural", "action", "drama"],
       "rating": 99,
       "toms": 41,
       "description": "Berserk (Japanese: ベルセルク, Hepburn: Beruseruku) is a Japanese manga series written and illustrated by Kentaro Miura. Set in a medieval Europe-inspired dark fantasy world, the story centers on the characters of Guts, a lone swordsman, and Griffith, the leader of a mercenary band called the \"Band of the Hawk\".",
@@ -104,12 +89,7 @@
         "https://w0.peakpx.com/wallpaper/688/434/HD-wallpaper-estigma-berserk-guts-manga-thumbnail.jpg",
         "https://kingkirascastlehome.files.wordpress.com/2019/05/94.jpg?w=525"
       ],
-      "sameTitles": [
-        12,
-        15,
-        16,
-        18
-      ],
+      "sameTitles": [12, 15, 16, 18],
       "parts": [
         {
           "p-1": "hello"
@@ -121,7 +101,7 @@
       "name": "Hunter X Hunter",
       "img": "https://m.media-amazon.com/images/M/MV5BNGM0YTk3MWEtN2JlZC00ZmZmLWIwMDktZTMxZGE5Zjc2MGExXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
       "wallpaper": "https://wallpapercave.com/wp/wp1859963.jpg",
-      "genre": "shonen, action, supernatural, drama ",
+      "genre": ["shonen", "action", "supernatural", "drama"],
       "rating": 98,
       "toms": 37,
       "description": "Hunter x Hunter (stylized as HUNTERxHUNTER and pronounced \"hunter hunter\") is a Japanese manga series written and illustrated by Yoshihiro Togashi. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March 1998, although the manga has frequently gone on extended hiatuses since 2006.",
@@ -133,12 +113,7 @@
         "https://64.media.tumblr.com/dd56c9be8169ff04eafb310b9017781a/tumblr_inline_pcc41lWR3L1uke6n8_640.jpg",
         "https://pbs.twimg.com/media/EgOMXYQXsAwuQGf.jpg:large"
       ],
-      "sameTitles": [
-        1,
-        3,
-        6,
-        7
-      ],
+      "sameTitles": [1, 3, 6, 7],
       "parts": [
         {
           "p-1": "hello"
@@ -150,7 +125,7 @@
       "name": "One-Punch Man",
       "img": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974725120/one-punch-man-vol-23-9781974725120_hr.jpg",
       "wallpaper": "https://images4.alphacoders.com/741/741017.png",
-      "genre": "shonen, heroes, supernatural, action ",
+      "genre": ["shonen", "heroes", "supernatural", "action"],
       "rating": 90,
       "toms": 28,
       "description": "One-Punch Man (ワンパンマン Wanpanman) is a Japanese webcomic, manga, and anime series created by ONE. TOn a supercontinent version of Earth that has four Moons, powerful monsters and supervillains wreak havoc. The millionaire Agoni creates the Hero Association, which employs superheroes to fight evil. Saitama, an unassociated hero, hails from City Z and performs heroic deeds as a hobby. ",
@@ -162,12 +137,7 @@
         "https://i.pinimg.com/736x/f1/d0/ac/f1d0ace3c73f6dc60d78bbc9e50ba7ec.jpg",
         "https://kingkirascastlehome.files.wordpress.com/2019/04/bofoi.png"
       ],
-      "sameTitles": [
-        1,
-        3,
-        5,
-        7
-      ],
+      "sameTitles": [1, 3, 5, 7],
       "parts": [
         {
           "p-1": "hello"
@@ -179,7 +149,7 @@
       "name": "Naruto",
       "img": "https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
       "wallpaper": "https://rare-gallery.com/uploads/posts/348402-4k-wallpaper.jpg",
-      "genre": "shonen, ninjas, drama, fantasy, action ",
+      "genre": ["shonen", "ninjas", "drama", "fantasy", "action"],
       "rating": 98,
       "toms": 72,
       "description": "Naruto[a] is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. The story is told in two parts—the first set in Naruto's pre-teen years, and the second in his teens.",
@@ -191,12 +161,7 @@
         "https://wallpapercave.com/wp/wp11355504.jpg",
         "https://e1.pxfuel.com/desktop-wallpaper/672/724/desktop-wallpaper-uchiha-sasuke-manga-panel.jpg"
       ],
-      "sameTitles": [
-        1,
-        3,
-        5,
-        9
-      ],
+      "sameTitles": [1, 3, 5, 9],
       "parts": [
         {
           "p-1": "hello"
@@ -208,7 +173,7 @@
       "name": "Death Note",
       "img": "https://m.media-amazon.com/images/I/71IX1R6kuML._AC_UF1000,1000_QL80_.jpg",
       "wallpaper": "https://wallpaperaccess.com/full/2026104.jpg",
-      "genre": "seinen, thriller, detective, dark-fantasy, drama ",
+      "genre": ["seinen", "thriller", "detective", "dark-fantasy", "drama"],
       "rating": 99,
       "toms": 12,
       "description": "Death Note (stylized in all caps) is a Japanese manga series written by Tsugumi Ohba and illustrated by Takeshi Obata. The story follows Light Yagami, a genius who discovers a mysterious notebook: the \"Death Note\", which belonged to the shinigami Ryuk, and grants the user the supernatural ability to kill anyone whose name is written in its pages.",
@@ -219,12 +184,7 @@
         "https://i.pinimg.com/736x/0f/fe/ca/0ffeca9162e0b12352ec1f38709ea592.jpg",
         "https://i.pinimg.com/736x/27/95/8f/27958f728c18b50141bd5db26793d69c.jpg"
       ],
-      "sameTitles": [
-        2,
-        13,
-        14,
-        17
-      ],
+      "sameTitles": [2, 13, 14, 17],
       "status": "outgoing",
       "parts": [
         {
@@ -237,7 +197,7 @@
       "name": "Fullmetal Alchemist",
       "img": "https://flxt.tmsimg.com/assets/p9064324_b_v8_aa.jpg",
       "wallpaper": "https://w.forfun.com/fetch/f4/f4b5cdc8686c30c0b18df465e2e95e42.jpeg",
-      "genre": "shonen, drama, detective, fantasy, drama ",
+      "genre": ["shonen", "drama", "detective", "fantasy", "drama"],
       "rating": 100,
       "toms": 27,
       "description": "Fullmetal Alchemist (Japanese: 鋼の錬金術師, Hepburn: Hagane no Renkinjutsushi, lit. \"Alchemist of Steel\") is a Japanese manga series written and illustrated by Hiromu Arakawa. Edward and Alphonse Elric, a two alchemist brothers who are searching for the philosopher's stone to restore their bodies after a failed attempt to bring their mother back to life using alchemy.",
@@ -249,12 +209,7 @@
         "https://i.pinimg.com/736x/fa/df/dc/fadfdcb546421c000030803605f5f19e--full-metal-alchemist-anime-comics.jpg",
         "https://pics.livejournal.com/kate_nepveu/pic/000exts4"
       ],
-      "sameTitles": [
-        1,
-        3,
-        5,
-        7
-      ],
+      "sameTitles": [1, 3, 5, 7],
       "parts": [
         {
           "p-1": "hello"
@@ -266,7 +221,7 @@
       "name": "Chainsaw Man",
       "img": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974709939/chainsaw-man-vol-1-9781974709939_hr.jpg",
       "wallpaper": "https://i.postimg.cc/66hmvFSB/wallpapersden-com-denji-hd-chainsaw-man-colorful-art-2560x1440.jpg",
-      "genre": "seinen, action, comedy, dark-fantasy, drama ",
+      "genre": ["seinen", "action", "comedy", "dark-fantasy", "drama"],
       "rating": 96,
       "toms": 14,
       "description": "Chainsaw Man (Japanese: チェンソーマン, Hepburn: Chensō Man) is a Japanese manga series written and illustrated by Tatsuki Fujimoto. hainsaw Man follows the story of Denji, an impoverished young man who makes a contract that fuses his body with that of a dog-like devil named Pochita, granting him the ability to transform parts of his body into chainsaws.",
@@ -278,12 +233,7 @@
         "https://pbs.twimg.com/media/Fgkm1mhVEAAyFuD.jpg",
         "https://pbs.twimg.com/media/Fgt03t6X0AAzbSV.jpg:large"
       ],
-      "sameTitles": [
-        2,
-        12,
-        18,
-        20
-      ],
+      "sameTitles": [2, 12, 18, 20],
       "parts": [
         {
           "p-1": "hello"
@@ -295,7 +245,7 @@
       "name": "Dr. Stone",
       "img": "https://www.starcomics.com/files/immagini/fumetti-cover/drstone1-1200px",
       "wallpaper": "https://images6.alphacoders.com/102/1027254.jpg",
-      "genre": "shonen, sciencepop, comedy, drama ",
+      "genre": ["shonen", "sciencepop", "comedy", "drama"],
       "rating": 95,
       "toms": 26,
       "description": "Dr. Stone (stylized as Dr.STONE) is a Japanese manga series written by Riichiro Inagaki and illustrated by the South Korean artist Boichi. It was serialized in Shueisha's Weekly Shōnen Jump from March 2017 to March 2022, with its chapters collected in 26 tankōbon volumes. The story follows Senku Ishigami, a scientific genius who plans to rebuild civilization after humanity was mysteriously petrified for 3,700 years.",
@@ -307,12 +257,7 @@
         "https://read.mangadad.com/Mangadad/Dr.%20Stone/chapter-170/1.jpg",
         "https://read.mangadad.com/Mangadad/Dr.%20Stone/chapter-135/2.jpg"
       ],
-      "sameTitles": [
-        3,
-        5,
-        6,
-        7
-      ],
+      "sameTitles": [3, 5, 6, 7],
       "parts": [
         {
           "p-1": "hello"
@@ -324,7 +269,7 @@
       "name": "Tokyo Ghoul",
       "img": "https://m.media-amazon.com/images/M/MV5BN2E2OTgzODktMjBhYy00MjJjLWI0OTgtNGYxOGNhMWMxOWE4XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
       "wallpaper": "https://images.hdqwalls.com/download/tokyo-ghoul-4k-16-2560x1080.jpg",
-      "genre": "seinen, dark-fantasy, drama, action ",
+      "genre": ["seinen", "dark-fantasy", "drama", "action"],
       "rating": 99,
       "toms": 14,
       "description": "Tokyo Ghoul (Japanese: 東京喰種トーキョーグール, Hepburn: Tōkyō Gūru) is a Japanese dark fantasy manga series written and illustrated by Sui Ishida. Ken Kaneki, is a college student who is transformed into a half-ghoul after an encounter with one of them. He must navigate the complex social and political dynamics between humans and ghouls while struggling to maintain his humanity.",
@@ -336,12 +281,7 @@
         "https://pbs.twimg.com/media/EOwKo9pUUAAD_sv?format=jpg&name=large",
         "https://i.pinimg.com/originals/63/2e/7d/632e7d0542be658780decf1631baf5dd.jpg"
       ],
-      "sameTitles": [
-        2,
-        4,
-        15,
-        16
-      ],
+      "sameTitles": [2, 4, 15, 16],
       "parts": [
         {
           "p-1": "hello"
@@ -353,7 +293,7 @@
       "name": "Monster",
       "img": "https://i.pinimg.com/originals/b3/0d/6d/b30d6d12155c286edf7aeb7ece9c283d.jpg",
       "wallpaper": "https://wallpaperaccess.com/full/1776281.jpg",
-      "genre": "seinen, detective, drama, thriller ",
+      "genre": ["seinen", "detective", "drama", "thriller"],
       "rating": 99,
       "toms": 18,
       "description": "Monster (stylized in all caps) is a Japanese manga series written and illustrated by Naoki Urasawa. The story revolves around Kenzo Tenma, a Japanese surgeon living in Düsseldorf, Germany whose life enters turmoil after getting himself involved with Johan Liebert, one of his former patients, who is revealed to be a dangerous serial killer.",
@@ -365,12 +305,7 @@
         "https://1.bp.blogspot.com/-I7KHdwUwsw4/X_B-4oO6TOI/AAAAAAAACe4/ahLhuBpRPOIA5iB5wKZSg3osxlJUX9KtACLcBGAsYHQ/s1100/024.jpg",
         "https://i.pinimg.com/originals/f8/7b/20/f87b20ef42aec7f8bb0b0b5942a13d91.jpg"
       ],
-      "sameTitles": [
-        8,
-        14,
-        15,
-        20
-      ],
+      "sameTitles": [8, 14, 15, 20],
       "parts": [
         {
           "p-1": "hello"
@@ -382,7 +317,7 @@
       "name": "20th Century Boys",
       "img": "https://www.lagriffenoire.com/cache/images/product/6b017aed5ea8f1beceb8889b4413de39-0049113-image-9791039103237.jpg",
       "wallpaper": "https://wallpaperaccess.com/full/5760563.jpg",
-      "genre": "seinen, science-fiction, drama, thriller ",
+      "genre": ["seinen", "science-fiction", "drama", "thriller"],
       "rating": 98,
       "toms": 22,
       "description": "20th Century Boys (Japanese: 20世紀少年, Hepburn: Nijusseiki Shōnen) is a Japanese manga series written and illustrated by Naoki Urasawa. It tells the story of Kenji Endo and his friends, who notice a cult-leader known only as \"Friend\" is out to destroy the world, and it has something to do with their childhood memories.",
@@ -394,12 +329,7 @@
         "https://pic1.mangapicgallery.com/r/album/99/md_/1369205_14635719.jpg",
         "https://www.animenewsnetwork.com/thumbnails/max600x600/cms/house-of-1000-manga/61175/20thcent-2.jpg"
       ],
-      "sameTitles": [
-        8,
-        13,
-        15,
-        20
-      ],
+      "sameTitles": [8, 13, 15, 20],
       "parts": [
         {
           "p-1": "hello"
@@ -411,7 +341,14 @@
       "name": "Vagabond",
       "img": "https://m.media-amazon.com/images/I/71TY7kJBo9L._AC_UF1000,1000_QL80_.jpg",
       "wallpaper": "https://i.postimg.cc/13Mm7WfS/wallpapersden-com-vagabond-hd-2560x1440.jpg",
-      "genre": "seinen, samurai, drama, thriller, action, dark-fantasy ",
+      "genre": [
+        "seinen",
+        "samurai",
+        "drama",
+        "thriller",
+        "action",
+        "dark-fantasy"
+      ],
       "rating": 99,
       "toms": 38,
       "description": "Vagabond (Japanese: バガボンド, Hepburn: Bagabondo) is a Japanese epic martial arts manga series written and illustrated by Takehiko Inoue. It portrays a fictionalized account of the life of Japanese swordsman Musashi Miyamoto, based on Eiji Yoshikawa's novel Musashi. It has been serialized in Kodansha's seinen manga magazine Morning since September 1998, with its chapters collected in 37 tankōbon volumes as of July 2014.",
@@ -423,12 +360,7 @@
         "https://kingkirascastlehome.files.wordpress.com/2019/12/146.jpg?w=525",
         "https://pbs.twimg.com/media/EoZLz1EUwAItLC0.png"
       ],
-      "sameTitles": [
-        2,
-        4,
-        12,
-        16
-      ],
+      "sameTitles": [2, 4, 12, 16],
       "parts": [
         {
           "p-1": "hello"
@@ -440,7 +372,7 @@
       "name": "Vinland Saga",
       "img": "https://m.media-amazon.com/images/I/91KS3nAZfRL._AC_UF1000,1000_QL80_.jpg",
       "wallpaper": "https://images.hdqwalls.com/wallpapers/vinland-saga-assassins-creed-valhalla-4k-f5.jpg",
-      "genre": "seinen, vikings, drama, thriller, action",
+      "genre": ["seinen", "vikings", "drama", "thriller", "action"],
       "rating": 99,
       "toms": 27,
       "description": "Vinland Saga (Japanese: ヴィンランド・サガ, Hepburn: Vinrando Saga) is a Japanese historical manga series written and illustrated by Makoto Yukimura. The series is published by Kodansha, and was first serialized in the boys-targeted manga magazine Weekly Shōnen Magazine before moving to the monthly manga magazine Monthly Afternoon, aimed at young adult men.",
@@ -452,12 +384,7 @@
         "https://pbs.twimg.com/media/EcqM2nWX0AQ-pRM.jpg",
         "https://pbs.twimg.com/media/EkXohAwXkAIcl1l.jpg"
       ],
-      "sameTitles": [
-        2,
-        4,
-        12,
-        15
-      ],
+      "sameTitles": [2, 4, 12, 15],
       "parts": [
         {
           "p-1": "hello"
@@ -469,7 +396,14 @@
       "name": "Code Gease",
       "img": "https://m.media-amazon.com/images/M/MV5BZmUxZmVlNGMtZGMyMy00MmM3LTg5ZjgtNzFhZWU4MTU5MjIwXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
       "wallpaper": "https://images4.alphacoders.com/775/775477.jpg",
-      "genre": "seinen, alternate history ,science-fiction, mecha, thriller, action",
+      "genre": [
+        "seinen",
+        "alternate history",
+        "science-fiction",
+        "mecha",
+        "thriller",
+        "action"
+      ],
       "rating": 98,
       "toms": 8,
       "description": "Code Geass: Lelouch of the Rebellion (Japanese: コードギアス 反逆のルルーシュ, Hepburn: Kōdo Giasu: Hangyaku no Rurūshu), often referred to simply as Code Geass. Set in an alternate timeline, it follows the exiled prince Lelouch vi Britannia, who obtains the \"power of absolute obedience\" from a mysterious woman named C.C. Using this supernatural power, known as Geass, he leads a rebellion against the rule of the Holy Britannian Empire, commanding a series of mecha battles.",
@@ -481,12 +415,7 @@
         "https://i.pinimg.com/originals/2d/4e/f8/2d4ef8935b9f9099ea08a02f6e9ac13c.jpg",
         "https://images6.fanpop.com/image/photos/34300000/code-geass-code-geass-34307722-800-1173.jpg"
       ],
-      "sameTitles": [
-        2,
-        8,
-        13,
-        14
-      ],
+      "sameTitles": [2, 8, 13, 14],
       "parts": [
         {
           "p-1": "hello"
@@ -498,7 +427,13 @@
       "name": "BLAME!",
       "img": "https://kbimages1-a.akamaihd.net/f8874392-b7c6-4bd1-9553-51f2b8a6be9f/1200/1200/False/blame-vol-10-1.jpg",
       "wallpaper": "https://wallpaperswide.com/download/blame-wallpaper-2560x1600.jpg",
-      "genre": "seinen, alternate history, science-fiction, thriller, action",
+      "genre": [
+        "seinen",
+        "alternate history",
+        "science-fiction",
+        "thriller",
+        "action"
+      ],
       "rating": 92,
       "toms": 10,
       "description": "Blame! (stylized as BLAME!) is a Japanese science fiction manga series written and illustrated by Tsutomu Nihei. It was published by Kodansha in the seinen manga magazine Monthly Afternoon from 1997 to 2003, with its chapters collected in ten tankōbon volumes. A six-part original net animation was produced in 2003, with a seventh episode included on the DVD release. An anime film adaptation by Polygon Pictures was released as a Netflix original in May 2017.",
@@ -510,12 +445,7 @@
         "https://qph.cf2.quoracdn.net/main-qimg-0a3c43155be4211e93b49497505306de-pjlq",
         "https://i.pinimg.com/originals/45/c1/75/45c175032b0dbb1e0d57fb1de2c59060.jpg"
       ],
-      "sameTitles": [
-        4,
-        10,
-        12,
-        20
-      ],
+      "sameTitles": [4, 10, 12, 20],
       "parts": [
         {
           "p-1": "hello"
@@ -527,7 +457,7 @@
       "name": "Solo Leveling",
       "img": "https://st2.myideasoft.com/shop/cd/03/myassets/products/745/81zac67de1s.jpeg?revision=1643824677",
       "wallpaper": "https://i.postimg.cc/cLKKYyFj/wallpapersden-com-solo-leveling-4k-digital-2560x1440.jpg",
-      "genre": "shonen, heroica ,action, issekai, fantasy",
+      "genre": ["shonen", "heroica", "action", "issekai", "fantasy"],
       "rating": 86,
       "toms": 5,
       "description": "Solo Leveling, also alternatively translated as Only I Level Up (Korean: 나 혼자만 레벨업; RR: Na Honjaman Rebeleop), is a South Korean web novel written by Chugong. It was serialized in Kakao's digital comic and fiction platform KakaoPage beginning on July 25, 2016, and was later published in full by D&C Media under their Papyrus label on November 4, 2016. The novel has been licensed in English by Yen Press.",
@@ -539,12 +469,7 @@
         "https://e0.pxfuel.com/wallpapers/315/54/desktop-wallpaper-the-shadow-monarch-solo-leveling-manga.jpg",
         "https://e0.pxfuel.com/wallpapers/434/221/desktop-wallpaper-sung-jin-woo-manhwa-manga.jpg"
       ],
-      "sameTitles": [
-        6,
-        10,
-        21,
-        22
-      ],
+      "sameTitles": [6, 10, 21, 22],
       "parts": [
         {
           "p-1": "hello"
@@ -556,7 +481,7 @@
       "name": "Gantz",
       "img": "https://www.pulsar.ua/files/webp/img_products/full_Gantz-3.webp",
       "wallpaper": "https://wallpaperaccess.com/full/2218436.jpg",
-      "genre": "seinen, action, issekai, science fiction",
+      "genre": ["seinen", "action", "issekai", "science fiction"],
       "rating": 90,
       "toms": 37,
       "description": "Gantz (stylized in all caps) is a Japanese manga series written and illustrated by Hiroya Oku. It tells the story of Kei Kurono and Masaru Kato, both of whom died in a train accident and become part of a semi-posthumous \"game\" in which they and several other recently deceased people are forced to hunt down and kill aliens armed with a handful of futuristic items, equipment, and weaponry.",
@@ -568,12 +493,7 @@
         "https://pbs.twimg.com/media/EwIGkc2XMAMZHio.jpg",
         "https://pbs.twimg.com/media/Ewd_RHVWUAECnAb.jpg"
       ],
-      "sameTitles": [
-        4,
-        10,
-        12,
-        18
-      ],
+      "sameTitles": [4, 10, 12, 18],
       "parts": [
         {
           "p-1": "hello"
@@ -585,7 +505,7 @@
       "name": "Leviathan",
       "img": "https://www.manga-news.com/public/images/series/leviathan-deep-water-1-kmics.jpg",
       "wallpaper": "https://rare-gallery.com/livewalls/imgpreview/141494-eyes-of-deep-space-leviathan-live-wallpaper.jpg",
-      "genre": "shonen, science fiction ,action, drama",
+      "genre": ["shonen", "science fiction", "action", "drama"],
       "rating": 78,
       "toms": 12,
       "description": "Leviathan, also known as Deep Sea Water is an outgoing Korean post-apocalypse manhwa written by Lee Gyuntak and illustrated by Noh Miyoung. Taking place on a post-apocalyptic aquatic earth a century after a calamity rose the sea levels, Leviathan follows the adventures of siblings Bota and Rita after their father, Teon Ma, sacrificed his life to save them from a sea monster..",
@@ -597,12 +517,7 @@
         "https://preview.redd.it/underrated-manhwa-leviathan-v0-xdfvs0oifzu81.jpg?width=640&crop=smart&auto=webp&s=6f09a758bbb13f0a15154ca53f01edceae844692",
         "https://static.zerochan.net/Leviathan.%28Lee.Gyun-Tak%29.full.3200819.jpg"
       ],
-      "sameTitles": [
-        3,
-        5,
-        19,
-        22
-      ],
+      "sameTitles": [3, 5, 19, 22],
       "parts": [
         {
           "p-1": "hello"
@@ -614,7 +529,7 @@
       "name": "Sword Art Online",
       "img": "https://m.media-amazon.com/images/M/MV5BMTVlNzM0YjktNjdmNS00MmZmLTk4MjgtOWUyNTQ2MjFiNmU5XkEyXkFqcGdeQXVyODMyNTM0MjM@._V1_FMjpg_UX1000_.jpg",
       "wallpaper": "https://i.pinimg.com/originals/51/48/ca/5148ca60a3cd061d87fbdd69fc604c7f.jpg",
-      "genre": "shonen, issekai ,action, drama",
+      "genre": ["shonen", "issekai", "action", "drama"],
       "rating": 27,
       "toms": 12,
       "description": "Sword Art Online (Japanese: ソードアート・オンライン, Hepburn: Sōdo Āto Onrain) is a Japanese light novel series written by Reki Kawahara and illustrated by abec. The series takes place in the then-near future and focuses on protagonists Kazuto \"Kirito\" Kirigaya and Asuna Yuuki as they play through various virtual reality MMORPG worlds.",
@@ -626,12 +541,7 @@
         "https://image.myanimelist.net/ui/OK6W_koKDTOqqqLDbIoPAplZjAWnI4WuloagpbGMPgE",
         "https://64.media.tumblr.com/76d02200624642469b68fc7049bcca22/abf94bd60ab54930-91/s500x750/76dec035013885eeef97e3bf09fabf1e66ef679c.png"
       ],
-      "sameTitles": [
-        3,
-        6,
-        19,
-        21
-      ],
+      "sameTitles": [3, 6, 19, 21],
       "parts": [
         {
           "p-1": "hello"

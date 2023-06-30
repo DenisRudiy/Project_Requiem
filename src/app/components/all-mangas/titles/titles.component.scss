@@ -12,6 +12,30 @@
   backdrop-filter: blur(3px);
   z-index: 5;
 }
+.filter_block {
+  div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    label {
+      font-family: "Rubik", sans-serif;
+      margin-left: 10px;
+    }
+    .filt:after {
+      background-color: var(--bg-button);
+    }
+    .filt {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: 0.2s all;
+      accent-color: var(--bg-redbtnOpen);
+    }
+    .filt:active {
+      transform: translateY(10px);
+    }
+  }
+}
 
 .hidden {
   display: none;
@@ -113,6 +137,11 @@
   }
   .filters:active {
     transform: translateY(20px);
+  }
+
+  .filter_block {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -257,6 +286,19 @@
 ::ng-deep {
   * {
     box-sizing: unset;
+  }
+  .p-overlaypanel {
+    background-color: var(--bg-button) !important;
+    color: white !important;
+    width: 200px !important;
+    padding: 10px !important;
+  }
+  .p-overlaypanel .p-overlaypanel-content {
+    padding: 0px !important;
+  }
+  .p-overlaypanel:before,
+  .p-overlaypanel:after {
+    display: none;
   }
 
   .ngx-pagination {
