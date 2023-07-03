@@ -1,3 +1,50 @@
-<div class="details">
-     
+<div class="details" *ngIf="detail_page == 'details'">
+  <div class="about_user">
+    <div class="logo">
+      <img src="{{ loggedUser.photo }}" alt="" />
+    </div>
+    <div class="description">
+      <h2>{{ loggedUser.name }}</h2>
+      <h4>{{ loggedUser.email }}</h4>
+      <h4>{{ loggedUser.role }}</h4>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="last_read">
+      <h2>Last read</h2>
+      <div class="titles">
+        <div class="title_images">
+          <div class="titles_block" *ngFor="let m of userManga">
+            <img
+              src="{{ m.img }}"
+              alt=""
+              (click)="setManga(m)"
+              routerLink="currentManga"
+            />
+            <p style="text-transform: uppercase; font-weight: 700">
+              <i class="pi pi-book"></i> Start Reading
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="favorite_frames">
+      <h2>Favorite frames</h2>
+      <div class="frames">
+        <div class="images">
+          <div *ngFor="let r of loggedUser.favorite" class="image_item">
+            <img src="{{ r }}" alt="" />
+          </div>
+        </div>
+        <div class="btn_block">
+          <button (click)="changePage('frames')" class="btn">View More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="frames_page" *ngIf="detail_page == 'frames'">
+  <app-frames (BackFunc)="changePage($event)"></app-frames>
 </div>

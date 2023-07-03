@@ -208,6 +208,23 @@
   border-radius: 0px 0px 10px 10px;
 }
 
+@media only screen and (min-width: 1500px) and (max-width: 1980px) {
+  .titles {
+    height: 50vw;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    .manga {
+      .overlay {
+        width: calc(12.5vw + 20px);
+        height: calc(20vw + 40px);
+        img {
+          width: 12.5vw;
+          height: 20vw;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1100px) and (max-width: 1500px) {
   .titles {
     height: 80vw;

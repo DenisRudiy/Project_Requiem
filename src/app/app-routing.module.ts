@@ -23,6 +23,11 @@ const routes: Routes = [
     redirectTo: 'currentManga',
     pathMatch: 'full',
   },
+  {
+    path: 'profile/currentManga',
+    redirectTo: 'currentManga',
+    pathMatch: 'full',
+  },
   { path: 'currentManga/allManga', redirectTo: 'allManga', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'currentManga', component: CurrentMangaComponent },

@@ -29,6 +29,7 @@ import { LoginComponent } from './components/header/user/login/login.component';
 import { EditComponent } from './components/header/user/edit/edit.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DetailComponent } from './components/profile/detail/detail.component';
+import { FramesComponent } from './components/profile/detail/frames/frames.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { DetailComponent } from './components/profile/detail/detail.component';
     EditComponent,
     ProfileComponent,
     DetailComponent,
+    FramesComponent,
   ],
   imports: [
     BrowserModule,

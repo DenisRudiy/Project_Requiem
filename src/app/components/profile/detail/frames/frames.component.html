@@ -1,0 +1,27 @@
+<div class="frames_page">
+  <div class="btn_back">
+    <i
+      class="pi pi-arrow-left"
+      style="color: rgb(255, 255, 255)"
+      (click)="goBack('details')"
+    ></i>
+  </div>
+  <div class="all_frames">
+    <div
+      *ngFor="
+        let r of loggedUser.favorite
+          | paginate : { itemsPerPage: countOfTitles, currentPage: page }
+      "
+    >
+      <img src="{{ r }}" alt="" />
+    </div>
+  </div>
+  <div class="pagination">
+    <pagination-controls
+      (pageChange)="page = $event"
+      class="paginator"
+      [hidden]="false"
+      [maxSize]="maxSizePages"
+    ></pagination-controls>
+  </div>
+</div>

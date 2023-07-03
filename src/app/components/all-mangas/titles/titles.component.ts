@@ -26,14 +26,25 @@ export class TitlesComponent implements OnInit {
     window.scrollTo(-1000, 0);
     this.service.getAll().subscribe((data) => {
       this.allManga = data;
+
+      const sortedManga = sessionStorage.getItem('sorting');
+      if (sortedManga !== null && sortedManga?.length !== 2) {
+        this.sortedManga = JSON.parse(sortedManga);
+      } else {
+        this.sortedManga = this.allManga;
+        this.filterList('all');
+      }
     });
     this.screenWidth = window.innerWidth;
-    if (this.screenWidth <= 1500) {
-      this.countOfTitles = 6;
-      this.maxSizePages = 5;
-    } else if (this.screenWidth > 1500) {
+    if (this.screenWidth > 1980) {
       this.countOfTitles = 12;
       this.maxSizePages = 10;
+    } else if (this.screenWidth <= 1980 && this.screenWidth > 1500) {
+      this.countOfTitles = 10;
+      this.maxSizePages = 10;
+    } else if (this.screenWidth <= 1500) {
+      this.countOfTitles = 6;
+      this.maxSizePages = 5;
     }
 
     if (this.allManga.length % 12 != 0) {
@@ -42,32 +53,36 @@ export class TitlesComponent implements OnInit {
       this.countOfPages = this.allManga.length / 12;
     }
 
-    const lastPage = sessionStorage.getItem('lastPage');
-    if (lastPage !== null) {
-      this.page = JSON.parse(lastPage);
-    }
+    setTimeout(() => {
+      const lastPage = sessionStorage.getItem('lastPage');
+      if (lastPage !== null) {
+        console.log();
 
-    const sortedManga = sessionStorage.getItem('sorting');
-    if (sortedManga !== null) {
-      this.sortedManga = JSON.parse(sortedManga);
-    } else {
-      this.sortedManga = this.allManga;
-    }
+        if (Math.trunc(this.allManga.length / 12) + 1 >= parseInt(lastPage)) {
+          this.page = JSON.parse(lastPage);
+        } else {
+          this.page = 1;
+        }
+      }
+    }, 50);
   }
 
   // * hide header
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
-    if (this.screenWidth <= 1500) {
-      this.countOfTitles = 6;
-      this.maxSizePages = 5;
-    } else if (this.screenWidth > 1500) {
+    if (this.screenWidth > 1980) {
       this.countOfTitles = 12;
       this.maxSizePages = 10;
       if (this.allManga.length % 12 !== this.countOfPages && this.page !== 1) {
         this.page = Math.round(this.allManga.length / 12);
       }
+    } else if (this.screenWidth <= 1980 && this.screenWidth > 1500) {
+      this.countOfTitles = 10;
+      this.maxSizePages = 10;
+    } else if (this.screenWidth <= 1500) {
+      this.countOfTitles = 6;
+      this.maxSizePages = 5;
     }
   }
 

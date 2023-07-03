@@ -2,8 +2,10 @@ export class User {
   id!: number;
   name!: string;
   email!: string;
-  status!: string;
   password!: string;
+  status!: string;
   role!: string;
+  lastRead!: number[];
+  favorite!: string[];
   photo!: string;
 }
