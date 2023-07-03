@@ -14,7 +14,7 @@
     <div class="last_read">
       <h2>Last read</h2>
       <div class="titles">
-        <div class="title_images">
+        <div class="title_images" *ngIf="userManga.length != 0">
           <div class="titles_block" *ngFor="let m of userManga">
             <img
               src="{{ m.img }}"
@@ -27,11 +27,17 @@
             </p>
           </div>
         </div>
+        <div *ngIf="userManga.length == 0" class="notRead">
+          <p>You don't look on any manga!</p>
+          <div class="btn_block">
+            <button class="btn" routerLink="allManga">Read Manga</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="favorite_frames">
       <h2>Favorite frames</h2>
-      <div class="frames">
+      <div class="frames" *ngIf="loggedUser.favorite.length != 0">
         <div class="images">
           <div *ngFor="let r of loggedUser.favorite" class="image_item">
             <img src="{{ r }}" alt="" />
@@ -40,6 +46,9 @@
         <div class="btn_block">
           <button (click)="changePage('frames')" class="btn">View More</button>
         </div>
+      </div>
+      <div class="noFrames" *ngIf="loggedUser.favorite.length == 0">
+        <p>This list is empty!</p>
       </div>
     </div>
   </div>
