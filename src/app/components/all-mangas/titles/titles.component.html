@@ -147,11 +147,11 @@
   </div>
 </div>
 <div class="pagination">
-  <pagination-controls
-    (pageChange)="page = $event"
-    class="paginator"
-    [hidden]="false"
-    [maxSize]="maxSizePages"
-    (click)="changePage()"
-  ></pagination-controls>
+  <pagination-controls class="paginator" [hidden]="false"></pagination-controls>
+  <button (click)="showMore()">
+    <i class="pi pi-angle-down" style="font-size: 2rem"></i>
+  </button>
+  <button (click)="showLess()">
+    <i class="pi pi-angle-up" style="font-size: 2rem"></i>
+  </button>
 </div>

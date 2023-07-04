@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Manga } from 'src/app/interfaces/manga';
 import { MangaService } from 'src/app/services/manga.service';
 
@@ -14,8 +14,6 @@ export class TitlesComponent implements OnInit {
   sortedManga: Manga[] = [];
   countOfTitles = 12;
   page = 1;
-  maxSizePages = 10;
-  countOfPages = 1;
   names: string[] = [];
 
   // * constructor
@@ -35,66 +33,32 @@ export class TitlesComponent implements OnInit {
         this.filterList('all');
       }
     });
-    this.screenWidth = window.innerWidth;
-    if (this.screenWidth > 1980) {
-      this.countOfTitles = 12;
-      this.maxSizePages = 10;
-    } else if (this.screenWidth <= 1980 && this.screenWidth > 1500) {
-      this.countOfTitles = 10;
-      this.maxSizePages = 10;
-    } else if (this.screenWidth <= 1500) {
-      this.countOfTitles = 6;
-      this.maxSizePages = 5;
+    const countOfTitles = sessionStorage.getItem('countOfTitles');
+    if (countOfTitles !== null) {
+      this.countOfTitles = JSON.parse(countOfTitles);
+      console.log(countOfTitles, this.countOfTitles);
     }
-
-    if (this.allManga.length % 12 != 0) {
-      this.countOfPages = Math.trunc(this.allManga.length / 12) + 1;
-    } else {
-      this.countOfPages = this.allManga.length / 12;
-    }
-
-    setTimeout(() => {
-      const lastPage = sessionStorage.getItem('lastPage');
-      if (lastPage !== null) {
-        console.log();
-
-        if (Math.trunc(this.allManga.length / 12) + 1 >= parseInt(lastPage)) {
-          this.page = JSON.parse(lastPage);
-        } else {
-          this.page = 1;
-        }
-      }
-    }, 50);
   }
 
-  // * hide header
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.screenWidth = window.innerWidth;
-    if (this.screenWidth > 1980) {
-      this.countOfTitles = 12;
-      this.maxSizePages = 10;
-      if (this.allManga.length % 12 !== this.countOfPages && this.page !== 1) {
-        this.page = Math.round(this.allManga.length / 12);
-      }
-    } else if (this.screenWidth <= 1980 && this.screenWidth > 1500) {
-      this.countOfTitles = 10;
-      this.maxSizePages = 10;
-    } else if (this.screenWidth <= 1500) {
-      this.countOfTitles = 6;
-      this.maxSizePages = 5;
+  // * show more titles
+  showMore() {
+    this.countOfTitles += 12;
+    sessionStorage.setItem('countOfTitles', JSON.stringify(this.countOfTitles));
+  }
+  // * show less titles
+  showLess() {
+    if (this.countOfTitles > 12) {
+      this.countOfTitles -= 12;
+      sessionStorage.setItem(
+        'countOfTitles',
+        JSON.stringify(this.countOfTitles)
+      );
     }
   }
 
   // * set redirect to current manga page
   setManga(manga: Manga) {
     this.service.setManga(manga);
-  }
-
-  // * save current page to sessionStorage
-  changePage() {
-    sessionStorage.setItem('lastPage', JSON.stringify(this.page));
-    window.scrollTo(-1000, 0);
   }
 
   // * show search block

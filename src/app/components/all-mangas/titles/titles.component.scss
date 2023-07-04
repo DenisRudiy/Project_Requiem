@@ -147,7 +147,8 @@
 
 .titles {
   width: 100%;
-  height: 40vw;
+  // height: 40vw;
+  padding-top: 50px;
   background-color: var(--bg-block);
   border-radius: 10px 10px 0px 0px;
   display: grid;
@@ -206,11 +207,38 @@
   align-items: center;
   background-color: var(--bg-block);
   border-radius: 0px 0px 10px 10px;
+  gap: 20px;
+
+  button {
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-redbtnOpen);
+    color: white;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+  button:active {
+    transform: translateY(20px);
+  }
 }
 
 @media only screen and (min-width: 1500px) and (max-width: 1980px) {
   .titles {
-    height: 50vw;
+    // height: 50vw;
     grid-template-columns: 18% 18% 18% 18% 18%;
     .manga {
       .overlay {
@@ -227,7 +255,7 @@
 
 @media only screen and (min-width: 1100px) and (max-width: 1500px) {
   .titles {
-    height: 80vw;
+    // height: 80vw;
     grid-template-columns: 32% 32% 32%;
     .manga {
       .overlay {
@@ -243,7 +271,7 @@
 }
 @media only screen and (min-width: 900px) and (max-width: 1100px) {
   .titles {
-    height: 80vw;
+    // height: 80vw;
     grid-template-columns: 32% 32% 32%;
     .manga {
       .overlay {
@@ -285,7 +313,7 @@
   }
 
   .titles {
-    height: 440vw;
+    // height: 440vw;
     grid-template-columns: 75%;
     .manga {
       .overlay {
@@ -319,64 +347,6 @@
   }
 
   .ngx-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .ngx-pagination li {
-    width: 35px;
-    height: 35px;
-    border-radius: 10px !important;
-    margin: 10px;
-    background-color: var(--bg-redbtnClose);
-    position: relative;
-    padding: 3px;
-    transition: all 0.3s;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-    .ngx-pagination span {
-      width: 35px !important;
-      height: 35px !important;
-    }
-
-    &.pagination-previous,
-    &.pagination-next,
-    &.small-screen {
-      display: none !important;
-    }
-
-    .ngx-pagination a,
-    .ngx-pagination button {
-      padding: 0 !important;
-    }
-  }
-
-  .ngx-pagination li:hover {
-    transform: scale(1.2);
-  }
-  .ngx-pagination li:active {
-    transform: translateY(20px);
-  }
-
-  .ngx-pagination a:hover,
-  .ngx-pagination button:hover {
-    background: initial !important;
-  }
-
-  .ngx-pagination .current {
-    background: var(--bg-redbtnOpen) !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    transition: 0.3s all;
+    display: none !important;
   }
 }

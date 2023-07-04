@@ -1,38 +1,38 @@
+.btn_back {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: var(--bg-button);
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s all;
+  }
+  i:hover {
+    background-color: rgb(94, 94, 94);
+  }
+  i:active {
+    transform: translateY(10px);
+  }
+}
 .frames_page {
   display: flex;
   flex-direction: column;
-  height: 50vw;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
   background-color: var(--bg-block);
-  .btn_back {
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-    background-color: var(--bg-button);
-    display: flex;
-    align-items: center;
+  padding-top: 50px;
 
-    i {
-      margin-left: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      color: white;
-      cursor: pointer;
-      transition: 0.2s all;
-    }
-    i:hover {
-      background-color: rgb(94, 94, 94);
-    }
-    i:active {
-      transform: translateY(10px);
-    }
-  }
   .all_frames {
-    height: calc(50vw - 50px - 100px);
     display: grid;
     width: 100%;
     grid-template-columns: 15% 15% 15% 15% 15% 15%;
@@ -57,6 +57,32 @@
     align-items: center;
     background-color: var(--bg-block);
     border-radius: 0px 0px 10px 10px;
+
+    button {
+      width: 200px;
+      height: 60px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background-color: var(--bg-redbtnOpen);
+      color: white;
+      font-family: "Rubik", sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.3s all;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: translateY(20px);
+    }
   }
 }
 
@@ -120,64 +146,6 @@
     box-sizing: unset;
   }
   .ngx-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .ngx-pagination li {
-    width: 35px;
-    height: 35px;
-    border-radius: 10px !important;
-    margin: 10px;
-    background-color: var(--bg-redbtnClose);
-    position: relative;
-    padding: 3px;
-    transition: all 0.3s;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-    .ngx-pagination span {
-      width: 35px !important;
-      height: 35px !important;
-    }
-
-    &.pagination-previous,
-    &.pagination-next,
-    &.small-screen {
-      display: none !important;
-    }
-
-    .ngx-pagination a,
-    .ngx-pagination button {
-      padding: 0 !important;
-    }
-  }
-
-  .ngx-pagination li:hover {
-    transform: scale(1.2);
-  }
-  .ngx-pagination li:active {
-    transform: translateY(20px);
-  }
-
-  .ngx-pagination a:hover,
-  .ngx-pagination button:hover {
-    background: initial !important;
-  }
-
-  .ngx-pagination .current {
-    background: var(--bg-redbtnOpen) !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    transition: 0.3s all;
+    display: none !important;
   }
 }
