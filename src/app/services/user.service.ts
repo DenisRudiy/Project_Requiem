@@ -10,6 +10,7 @@ export class UserService {
   // * variables
   url = 'http://localhost:3000/users';
   private loggedUser = new Subject<User>();
+  private subject = new Subject<any>();
 
   // * constructor
   constructor(private http: HttpClient) {
@@ -41,5 +42,13 @@ export class UserService {
 
   getLogUser(): Observable<User> {
     return this.loggedUser.asObservable();
+  }
+
+  sendClickEvent() {
+    this.subject.next(1);
+  }
+
+  getClickEvent(): Observable<any> {
+    return this.subject.asObservable();
   }
 }

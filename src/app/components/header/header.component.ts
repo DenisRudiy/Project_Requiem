@@ -6,6 +6,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import disableScroll from 'disable-scroll';
+import { Subscription } from 'rxjs';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -14,12 +16,17 @@ import disableScroll from 'disable-scroll';
 })
 export class HeaderComponent implements OnInit {
   // * variables
+  clickEventSubscription!: Subscription;
   public screenWidth: any;
   sidebarVisible = false;
   @ViewChild('scrollTarget') scrollTarget!: ElementRef;
 
   // * constructor
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef, private service: UserService) {
+    this.clickEventSubscription = this.service.getClickEvent().subscribe(() => {
+      this.ExitHeader('open');
+    });
+  }
 
   // * ngOnInit
   ngOnInit(): void {

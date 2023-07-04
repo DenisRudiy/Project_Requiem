@@ -1,12 +1,25 @@
 <div class="details" *ngIf="detail_page == 'details'">
   <div class="about_user">
-    <div class="logo">
-      <img src="{{ loggedUser.photo }}" alt="" />
-    </div>
-    <div class="description">
-      <h2>{{ loggedUser.name }}</h2>
-      <h4>{{ loggedUser.email }}</h4>
-      <h4>{{ loggedUser.role }}</h4>
+    <div class="user_card">
+      <div class="logo">
+        <img src="{{ loggedUser.photo }}" alt="" />
+      </div>
+      <div class="description">
+        <h2>{{ loggedUser.name }}</h2>
+        <h5>{{ loggedUser.email }}</h5>
+        <div
+          class="btn_block"
+          style="display: block; margin-left: 10px"
+          *ngIf="loggedUser.role == 'admin'"
+        >
+          <button
+            class="btn"
+            style="width: 100px; height: 40px; margin-top: 5px; font-size: 12px"
+          >
+            Admin Panel
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -15,18 +28,31 @@
       <h2>Last read</h2>
       <div class="titles">
         <div class="title_images" *ngIf="userManga.length != 0">
-          <div class="titles_block" *ngFor="let m of userManga">
-            <img
-              src="{{ m.img }}"
-              alt=""
-              (click)="setManga(m)"
-              routerLink="currentManga"
-            />
-            <p style="text-transform: uppercase; font-weight: 700">
-              <i class="pi pi-book"></i> Start Reading
-            </p>
+          <div class="titles_carousel">
+            <div class="titles_block" *ngFor="let m of userManga">
+              <img
+                src="{{ m.img }}"
+                alt=""
+                (click)="setManga(m)"
+                routerLink="currentManga"
+              />
+              <p style="text-transform: uppercase; font-weight: 700">
+                <i class="pi pi-book"></i> Start Reading
+              </p>
+            </div>
+          </div>
+
+          <div class="nav">
+            <button class="btn" (click)="clickLeft()">
+              <i class="pi pi-angle-double-left"></i>
+            </button>
+            <div class="space"></div>
+            <button class="btn" (click)="clickRight()">
+              <i class="pi pi-angle-double-right"></i>
+            </button>
           </div>
         </div>
+
         <div *ngIf="userManga.length == 0" class="notRead">
           <p>You don't look on any manga!</p>
           <div class="btn_block">
@@ -56,4 +82,11 @@
 
 <div class="frames_page" *ngIf="detail_page == 'frames'">
   <app-frames (BackFunc)="changePage($event)"></app-frames>
+</div>
+
+<div class="noneUser" *ngIf="detail_page == 'none'">
+  <h1>You may login to view your statistic!</h1>
+  <div class="btn_block">
+    <button (click)="openLogField()" class="btn">Login</button>
+  </div>
 </div>

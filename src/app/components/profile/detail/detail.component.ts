@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Manga } from 'src/app/interfaces/manga';
 import { User } from 'src/app/interfaces/user';
@@ -21,15 +21,38 @@ export class DetailComponent implements OnInit {
   constructor(
     private service: UserService,
     private mangaService: MangaService
-  ) {}
+  ) {
+    this.clickEventSubscription = this.service
+      .getLogUser()
+      .subscribe((data: User) => {
+        localStorage.setItem('chosenUser', JSON.stringify(data));
+        this.loggedUser.favorite = [];
+        this.loggedUser.lastRead = [];
+        this.loggedUser = data;
+        console.log(this.loggedUser);
+        if (this.loggedUser.status == 'logged') {
+          this.userManga = [];
+          this.mangaService.getAll().subscribe((data) => {
+            for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
+              this.userManga.push(data[this.loggedUser.lastRead[i]]);
+            }
+          });
+          this.detail_page = 'details';
+        } else {
+          this.detail_page = 'none';
+        }
+      });
+  }
 
   // * ngOnInit
   ngOnInit(): void {
     const loggedUser = localStorage.getItem('chosenUser');
     if (loggedUser !== null) {
       this.loggedUser = JSON.parse(loggedUser);
-      console.log(this.loggedUser.favorite.length);
-      console.log(this.loggedUser.lastRead.length);
+      console.log(this.loggedUser);
+      if (this.loggedUser.status == 'unlogged') {
+        this.detail_page = 'none';
+      }
     }
     this.mangaService.getAll().subscribe((data) => {
       for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
@@ -38,66 +61,64 @@ export class DetailComponent implements OnInit {
     });
   }
 
-  // * ngAfterViewInit
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      // * for frames
-      const carousel = document.querySelector('.images') as HTMLElement | null;
-      let isDragStart = false,
-        prevPageX: number,
-        prevScrollLeft: number;
+  clickRight() {
+    const titles = document.querySelector(
+      '.titles_carousel'
+    ) as HTMLElement | null;
+    if (titles !== null) {
+      const scrollAmount = 200;
+      const duration = 200;
 
-      // updating global variables on mouse down event
-      const DragStart = (e: MouseEvent) => {
-        isDragStart = true;
-        prevPageX = e.pageX;
-        prevScrollLeft = carousel!.scrollLeft;
-      };
-      const dragStop = () => {
-        isDragStart = false;
-      };
-      // scrolling images/carousel to left according to mouse pointer
-      const dragging = (e: MouseEvent) => {
-        if (carousel !== null) {
-          if (!isDragStart) return;
-          e.preventDefault();
-          let positionDiff = e.pageX - prevPageX;
-          carousel.scrollLeft = prevScrollLeft - positionDiff;
+      const startPosition = titles.scrollLeft;
+      const targetPosition = startPosition + scrollAmount;
+      const distance = targetPosition - startPosition;
+      const startTime = performance.now();
+
+      function scrollToSmoothly(timestamp: number) {
+        const currentTime = timestamp || performance.now();
+        const elapsedTime = currentTime - startTime;
+        const scrollProgress = Math.min(elapsedTime / duration, 1);
+        const scrollPosition = startPosition + distance * scrollProgress;
+
+        titles!.scrollLeft = scrollPosition;
+
+        if (scrollProgress < 1) {
+          window.requestAnimationFrame(scrollToSmoothly);
         }
-      };
-      carousel!.addEventListener('mousedown', DragStart);
-      carousel!.addEventListener('mousemove', dragging);
-      carousel!.addEventListener('mouseup', dragStop);
+      }
 
-      // * for titles
-      const titles = document.querySelector(
-        '.title_images'
-      ) as HTMLElement | null;
+      window.requestAnimationFrame(scrollToSmoothly);
+    }
+  }
 
-      let isDragStartT = false,
-        prevPageXT: number,
-        prevScrollLeftT: number;
+  clickLeft() {
+    const titles = document.querySelector(
+      '.titles_carousel'
+    ) as HTMLElement | null;
+    if (titles !== null) {
+      const scrollAmount = -200;
+      const duration = 200;
 
-      const DragStartT = (e: MouseEvent) => {
-        isDragStartT = true;
-        prevPageXT = e.pageX;
-        prevScrollLeftT = titles!.scrollLeft;
-      };
-      const dragStopT = () => {
-        isDragStartT = false;
-      };
-      const draggingT = (e: MouseEvent) => {
-        if (titles !== null) {
-          if (!isDragStartT) return;
-          e.preventDefault();
-          let positionDiff = e.pageX - prevPageXT;
-          titles.scrollLeft = prevScrollLeftT - positionDiff;
+      const startPosition = titles.scrollLeft;
+      const targetPosition = startPosition + scrollAmount;
+      const distance = targetPosition - startPosition;
+      const startTime = performance.now();
+
+      function scrollToSmoothly(timestamp: number) {
+        const currentTime = timestamp || performance.now();
+        const elapsedTime = currentTime - startTime;
+        const scrollProgress = Math.min(elapsedTime / duration, 1);
+        const scrollPosition = startPosition + distance * scrollProgress;
+
+        titles!.scrollLeft = scrollPosition;
+
+        if (scrollProgress < 1) {
+          window.requestAnimationFrame(scrollToSmoothly);
         }
-      };
-      titles!.addEventListener('mousedown', DragStartT);
-      titles!.addEventListener('mousemove', draggingT);
-      titles!.addEventListener('mouseup', dragStopT);
-    }, 500);
+      }
+
+      window.requestAnimationFrame(scrollToSmoothly);
+    }
   }
 
   // * change page
@@ -107,5 +128,9 @@ export class DetailComponent implements OnInit {
 
   setManga(manga: Manga) {
     this.mangaService.setManga(manga);
+  }
+
+  openLogField() {
+    this.service.sendClickEvent();
   }
 }
