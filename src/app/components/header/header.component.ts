@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import disableScroll from 'disable-scroll';
 import { Subscription } from 'rxjs';
+import { AddictionalService } from 'src/app/services/addictional.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -22,7 +23,11 @@ export class HeaderComponent implements OnInit {
   @ViewChild('scrollTarget') scrollTarget!: ElementRef;
 
   // * constructor
-  constructor(private el: ElementRef, private service: UserService) {
+  constructor(
+    private el: ElementRef,
+    private service: UserService,
+    private addService: AddictionalService
+  ) {
     this.clickEventSubscription = this.service.getClickEvent().subscribe(() => {
       this.ExitHeader('open');
     });

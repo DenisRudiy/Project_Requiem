@@ -4,6 +4,7 @@ import { MainComponent } from './components/main/main.component';
 import { AllMangasComponent } from './components/all-mangas/all-mangas.component';
 import { CurrentMangaComponent } from './components/current-manga/current-manga.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { BookComponent } from './components/book/book.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -33,11 +34,22 @@ const routes: Routes = [
     redirectTo: 'allManga',
     pathMatch: 'full',
   },
+  {
+    path: 'currentManga/book',
+    redirectTo: 'book',
+    pathMatch: 'full',
+  },
+  {
+    path: 'book/currentManga',
+    redirectTo: 'currentManga',
+    pathMatch: 'full',
+  },
   { path: 'currentManga/allManga', redirectTo: 'allManga', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'currentManga', component: CurrentMangaComponent },
   { path: 'allManga', component: AllMangasComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'book', component: BookComponent },
 ];
 
 @NgModule({

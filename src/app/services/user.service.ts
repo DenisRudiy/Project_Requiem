@@ -23,7 +23,7 @@ export class UserService {
 
   // * CRUD functions
   createUser(user: User): Observable<User> {
-    return this.http.post<User>(this.url, user);
+    return this.http.post<User>(`${this.url}/create`, user);
   }
 
   getUsers(): Observable<User[]> {
@@ -31,7 +31,7 @@ export class UserService {
   }
 
   updateUser(user: User): Observable<any> {
-    return this.http.put<User>(`${this.url}/${user.id}`, user);
+    return this.http.put<User>(`${this.url}/update/${user.id}`, user);
   }
 
   // * get/set functions

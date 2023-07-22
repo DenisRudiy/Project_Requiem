@@ -23,6 +23,8 @@
       height: 200px;
       border-radius: 50% 10px 10px 50%;
       .logo {
+        background-color: var(--bg-block);
+        border-radius: 50%;
         img {
           width: 250px;
           height: auto;

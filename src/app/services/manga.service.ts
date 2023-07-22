@@ -8,7 +8,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class MangaService {
   // * variables
-  url = 'http://localhost:3000/titles';
+  url = 'http://localhost:3000';
   private currentManga = new Subject<Manga>();
 
   // * constructor

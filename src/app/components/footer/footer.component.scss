@@ -8,6 +8,8 @@
   border-radius: 10px 10px 0px 0px;
   display: grid;
   grid-template-columns: 30% 35% 35%;
+  position: relative;
+  z-index: 20;
 
   .part {
     height: 100%;

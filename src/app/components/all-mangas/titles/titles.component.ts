@@ -36,7 +36,6 @@ export class TitlesComponent implements OnInit {
     const countOfTitles = sessionStorage.getItem('countOfTitles');
     if (countOfTitles !== null) {
       this.countOfTitles = JSON.parse(countOfTitles);
-      console.log(countOfTitles, this.countOfTitles);
     }
   }
 

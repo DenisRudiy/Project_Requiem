@@ -1,1 +1,26 @@
-<p>book works!</p>
+<div class="book">
+  <div class="backBtn">
+    <button routerLink="currentManga">
+      <i class="pi pi-arrow-left" style="color: white"></i>
+    </button>
+  </div>
+  <div class="book_window">
+    <div
+      class="photos"
+      *ngFor="
+        let manga of mangas | paginate : { itemsPerPage: 1, currentPage: page }
+      "
+    >
+      <img src="{{ manga }}" alt="" />
+      <button class="left" (click)="changePage('previous')"></button>
+      <button class="right" (click)="changePage('next')"></button>
+    </div>
+  </div>
+  <div style="z-index: 20">
+    <app-footer></app-footer>
+  </div>
+</div>
+
+<div class="pagination">
+  <pagination-controls class="paginator" [hidden]="false"></pagination-controls>
+</div>

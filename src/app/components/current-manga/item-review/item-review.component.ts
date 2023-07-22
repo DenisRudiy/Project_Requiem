@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Manga } from 'src/app/interfaces/manga';
+import { AddictionalService } from 'src/app/services/addictional.service';
 import { MangaService } from 'src/app/services/manga.service';
 
 @Component({
@@ -16,6 +17,16 @@ export class ItemReviewComponent implements OnInit {
   sameManga: Manga[] = [];
   sameTitles: [] = [];
   clickEventSubscription!: Subscription;
+
+  // * constructor
+  constructor(private service: MangaService) {
+    this.clickEventSubscription = this.service
+      .getManga()
+      .subscribe((data: Manga) => {
+        this.currentManga = data;
+        this.sameManga = this.currentManga.sameTitles;
+      });
+  }
 
   // * OnInit
   ngOnInit(): void {
@@ -37,16 +48,6 @@ export class ItemReviewComponent implements OnInit {
         }
       }
     });
-  }
-
-  // * constructor
-  constructor(private service: MangaService) {
-    this.clickEventSubscription = this.service
-      .getManga()
-      .subscribe((data: Manga) => {
-        this.currentManga = data;
-        this.sameManga = this.currentManga.sameTitles;
-      });
   }
 
   // * change manga
