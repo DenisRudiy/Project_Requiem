@@ -1,19 +1,42 @@
 <div class="book">
   <div class="backBtn">
-    <button routerLink="currentManga">
+    <button routerLink="currentManga" class="Btn">
       <i class="pi pi-arrow-left" style="color: white"></i>
     </button>
+
+    <div class="head">
+      <div class="custom-select-wrapper" (click)="toggleDropdown()">
+        <div class="selected-option">
+          {{ page }} <i class="pi pi-angle-down"></i>
+        </div>
+        <div class="options" [ngClass]="{ open: dropdownOpen }">
+          <div
+            *ngFor="let page of allPages"
+            class="option"
+            (click)="changePage(page)"
+          >
+            <div>
+              {{ page }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button><i class="pi pi-star"></i></button>
+    </div>
   </div>
   <div class="book_window">
     <div
       class="photos"
       *ngFor="
-        let manga of mangas | paginate : { itemsPerPage: 1, currentPage: page }
+        let p of allPhotoPages
+          | paginate : { itemsPerPage: 1, currentPage: page }
       "
     >
-      <img src="{{ manga }}" alt="" />
-      <button class="left" (click)="changePage('previous')"></button>
-      <button class="right" (click)="changePage('next')"></button>
+      <img src="{{ p.pageImage }}" alt="" />
+
+      <button class="left" (click)="changePage(1000)"></button>
+      <button class="right" (click)="changePage(1001)"></button>
     </div>
   </div>
   <div style="z-index: 20">

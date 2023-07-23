@@ -12,7 +12,7 @@
     padding: 0px 30px 0px 30px;
     background-color: var(--bg-button);
     z-index: 10;
-    button {
+    .Btn {
       width: 35px;
       height: 35px;
       border-radius: 50%;
@@ -22,11 +22,82 @@
       transition: 0.2s all;
       cursor: pointer;
     }
-    button:hover {
+    .Btn:hover {
       background-color: rgba(80, 70, 70, 100);
     }
-    button:active {
-      transform: translateY(20px);
+    .Btn:active {
+      transform: translateY(10px);
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .custom-select-wrapper {
+        position: relative;
+        width: 120px;
+        margin-left: 3vw;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: var(--bg-redbtnOpen);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+          rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+        .selected-option {
+          padding: 10px;
+          border-radius: 4px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .options {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: var(--bg-redbtnClose);
+          border-top: none;
+          border-radius: 0 0 5px 5px;
+          max-height: 300px;
+          overflow-y: auto;
+          display: none;
+
+          .option {
+            padding: 10px;
+            transition: 0.2s all;
+          }
+
+          .option:hover {
+            background-color: #b24949;
+          }
+          .option:active {
+            transform: scale(1.1);
+          }
+        }
+
+        .options.open {
+          display: block;
+        }
+      }
+
+      button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: var(--bg-redbtnOpen);
+        color: white;
+        border-radius: 10px;
+        transition: 0.2s all;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: var(--bg-redbtnClose);
+      }
+      button:active {
+        transform: translateY(10px);
+      }
     }
   }
   .book_window {

@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Manga } from '../interfaces/manga';
 import { Observable, Subject } from 'rxjs';
+import { Chapters } from '../interfaces/chapters';
+import { Pages } from '../interfaces/pages';
 
 @Injectable({
   providedIn: 'root',
@@ -23,6 +25,13 @@ export class MangaService {
   // * CRUD functions
   getAll() {
     return this.http.get<Manga[]>(this.url);
+  }
+
+  getMangaChapters(id: number) {
+    return this.http.get<Chapters[]>(this.url + `/${id}`);
+  }
+  getChapterParts(id: number, chapter_id: number) {
+    return this.http.get<Pages[]>(this.url + `/${id}/${chapter_id}`);
   }
 
   // * get/set functions

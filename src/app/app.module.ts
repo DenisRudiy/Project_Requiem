@@ -1,4 +1,4 @@
-// global
+// * global
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import { ToastModule } from 'primeng/toast';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
 
 // components
 import { AppComponent } from './app.component';
@@ -63,6 +65,8 @@ import { FramesComponent } from './components/profile/detail/frames/frames.compo
     ToastModule,
     OverlayPanelModule,
     RadioButtonModule,
+    DropdownModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
