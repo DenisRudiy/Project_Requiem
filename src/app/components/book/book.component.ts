@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
+import { finalize, forkJoin, Observable } from 'rxjs';
 import { Chapters } from 'src/app/interfaces/chapters';
 import { Manga } from 'src/app/interfaces/manga';
 import { Pages } from 'src/app/interfaces/pages';
@@ -11,19 +12,25 @@ import { MangaService } from 'src/app/services/manga.service';
   styleUrls: ['./book.component.scss'],
 })
 export class BookComponent implements OnInit {
+  //* variables
   currentManga!: Manga;
   page!: number;
   allPages: number[] = [];
   dropdownOpen = false;
   allPhotoPages: Pages[] = [];
+  loadedImages: number = 0;
   countOfPages!: number;
 
+  // * constructor
   constructor(
     private addService: AddictionalService,
     private el: ElementRef,
     private service: MangaService
   ) {}
 
+  @ViewChildren('imageElements') imageElements: ElementRef[] = [];
+
+  // * ngOnInit
   ngOnInit(): void {
     window.scrollTo(-1000, 0);
     const storedManga = localStorage.getItem('chosenManga');
@@ -52,6 +59,7 @@ export class BookComponent implements OnInit {
     }
   }
 
+  // * Activate dropdown to select page
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
     const dropdown = this.el.nativeElement.querySelector(
@@ -64,6 +72,7 @@ export class BookComponent implements OnInit {
     }
   }
 
+  // * Change Page
   changePage(action: number) {
     const dropdown = this.el.nativeElement.querySelector(
       '.custom-select-wrapper'
