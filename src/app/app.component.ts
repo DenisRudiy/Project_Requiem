@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AddictionalService } from './services/addictional.service';
 import { Subscription } from 'rxjs';
 
@@ -17,8 +17,18 @@ export class AppComponent implements OnInit {
       const storedManga = localStorage.getItem('openHeader');
       if (storedManga !== null) {
         this.showHeader = JSON.parse(storedManga);
+        console.log(this.showHeader);
       }
     });
+  }
+
+  @HostListener('click', ['$event'])
+  onKeyDown(event: MouseEvent) {
+    const storedManga = localStorage.getItem('openHeader');
+    if (storedManga !== null) {
+      this.showHeader = JSON.parse(storedManga);
+      console.log(this.showHeader);
+    }
   }
 
   ngOnInit(): void {}

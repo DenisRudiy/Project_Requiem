@@ -33,16 +33,31 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      .custom-select-wrapper {
-        position: relative;
-        width: 120px;
-        margin-left: 3vw;
-        cursor: pointer;
-        border-radius: 5px;
-        background-color: var(--bg-redbtnOpen);
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-          rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-
+      .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        .custom-select-wrapper {
+          position: relative;
+          width: 120px;
+          margin-left: 3vw;
+          cursor: pointer;
+          border-radius: 5px;
+          background-color: var(--bg-redbtnOpen);
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+            rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        }
+        .chapters {
+          position: relative;
+          width: 120px;
+          margin-left: 3vw;
+          cursor: pointer;
+          border-radius: 5px;
+          background-color: var(--bg-redbtnOpen);
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+            rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        }
         .selected-option {
           padding: 10px;
           border-radius: 4px;

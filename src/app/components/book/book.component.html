@@ -1,22 +1,40 @@
 <div class="book">
   <div class="backBtn">
-    <button routerLink="currentManga" class="Btn">
+    <button class="Btn" (click)="resetPage()">
       <i class="pi pi-arrow-left" style="color: white"></i>
     </button>
 
     <div class="head">
-      <div class="custom-select-wrapper" (click)="toggleDropdown()">
-        <div class="selected-option">
-          {{ page }} <i class="pi pi-angle-down"></i>
+      <div class="nav">
+        <div class="custom-select-wrapper" (click)="toggleDropdown()">
+          <div class="selected-option">
+            {{ page }} <i class="pi pi-angle-down"></i>
+          </div>
+          <div class="options" [ngClass]="{ open: dropdownOpen }">
+            <div
+              *ngFor="let page of allPages"
+              class="option"
+              (click)="changePage(page)"
+            >
+              <div>
+                {{ page }}
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="options" [ngClass]="{ open: dropdownOpen }">
-          <div
-            *ngFor="let page of allPages"
-            class="option"
-            (click)="changePage(page)"
-          >
-            <div>
-              {{ page }}
+        <div class="chapters" (click)="toggleChapters()">
+          <div class="selected-option">
+            {{ startedChapter + 1 }} <i class="pi pi-angle-down"></i>
+          </div>
+          <div class="options" [ngClass]="{ open: chaptersOpen }">
+            <div
+              *ngFor="let chapter of allChapters"
+              class="option"
+              (click)="changeChapter(chapter)"
+            >
+              <div>
+                {{ chapter.chapterNumber }}
+              </div>
             </div>
           </div>
         </div>
@@ -25,7 +43,7 @@
       <button><i class="pi pi-star"></i></button>
     </div>
   </div>
-  <div class="book_window">
+  <div class="book_window" *ngIf="!isLoading">
     <div
       class="photos"
       *ngFor="
@@ -39,8 +57,11 @@
       <button class="right" (click)="changePage(1001)"></button>
     </div>
   </div>
-  <div style="z-index: 20">
+  <div style="z-index: 20" *ngIf="!isLoading">
     <app-footer></app-footer>
+  </div>
+  <div *ngIf="isLoading" class="preloader">
+    <img src="../../../assets/preloader.gif" alt="Loading..." />
   </div>
 </div>
 

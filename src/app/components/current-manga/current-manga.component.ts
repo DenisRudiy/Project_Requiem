@@ -11,6 +11,5 @@ export class CurrentMangaComponent implements OnInit {
 
   ngOnInit(): void {
     this.addService.setHeader(true);
-    this.addService.setHeader(true);
   }
 }
