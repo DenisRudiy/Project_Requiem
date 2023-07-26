@@ -1,0 +1,181 @@
+<div class="options">
+  <button class="getBtn" (click)="changeType('manga')">Get Titles</button>
+  <div class="custom-select-wrapper" (click)="chaptersDropdown()">
+    <div class="selected-option">Get Chapters</div>
+    <div class="options" [ngClass]="{ open: chaptersOpen }">
+      <div
+        *ngFor="let item of allManga"
+        class="option"
+        (click)="getCurrentMangaChapters(item)"
+      >
+        <div>
+          {{ item.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="getBtn" (click)="getUsers()">Get Users</button>
+</div>
+
+<div *ngIf="type == 'manga'">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Img</th>
+        <th>Wallpaper</th>
+        <th>Genre</th>
+        <th>Rating</th>
+        <th>Toms</th>
+        <th>Description</th>
+        <th>Author</th>
+        <th>Status</th>
+        <th>Preview</th>
+        <th>Same Titles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let title of allManga">
+        <td>{{ title.id }}</td>
+        <td>{{ title.name }}</td>
+        <td>
+          <div>
+            {{ title.img }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.wallpaper }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.genre }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.rating }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.toms }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.description }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.author }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.status }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.preview }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.sameTitles }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="type == 'chapters'">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Manga ID</th>
+        <th>Number of Chapter</th>
+        <th>Count of Pages</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let title of allChapters">
+        <td>{{ title.id }}</td>
+        <td>{{ title.manga_id }}</td>
+        <td>
+          <div>
+            {{ title.chapterNumber }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.chapterLenght }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="type == 'users'">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Status</th>
+        <th>Role</th>
+        <th>Last Read</th>
+        <th>Favorite</th>
+        <th>Photo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let title of allUsers">
+        <td>{{ title.id }}</td>
+        <td>{{ title.name }}</td>
+        <td>
+          <div>
+            {{ title.email }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.password }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.status }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.role }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.lastRead }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.favorite }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ title.photo }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

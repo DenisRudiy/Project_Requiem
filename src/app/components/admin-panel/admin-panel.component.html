@@ -1,0 +1,33 @@
+<p-toast></p-toast>
+<button class="Back" routerLink="profile">
+  <i class="pi pi-arrow-left" style="color: white"></i>
+</button>
+<div *ngIf="!login" class="reg_blok">
+  <div>
+    <h2>Please log in</h2>
+    <input
+      type="text"
+      placeholder="user"
+      class="user"
+      (click)="inputBackUp('user')"
+    />
+    <input
+      type="password"
+      placeholder="password"
+      class="pw1"
+      (click)="inputBackUp('pw1')"
+    />
+    <input
+      type="password"
+      placeholder="password"
+      class="pw2"
+      (click)="inputBackUp('pw2')"
+    />
+
+    <button (click)="logIn()">Confirm</button>
+  </div>
+</div>
+
+<div *ngIf="login">
+  <app-admin-page></app-admin-page>
+</div>

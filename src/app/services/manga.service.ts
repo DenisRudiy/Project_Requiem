@@ -10,7 +10,7 @@ import { Pages } from '../interfaces/pages';
 })
 export class MangaService {
   // * variables
-  url = 'http://localhost:3000';
+  url = 'http://localhost:3000/manga';
   private currentManga = new Subject<Manga>();
 
   // * constructor

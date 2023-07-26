@@ -1,0 +1,134 @@
+@import "src/styles.scss";
+
+.options {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  .getBtn {
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-redbtnOpen);
+    color: white;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s all;
+  }
+  .getBtn:hover {
+    transform: scale(1.05);
+  }
+  .getBtn:active {
+    transform: translateY(20px);
+  }
+
+  .custom-select-wrapper {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--bg-redbtnOpen);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transition: 0.2s all;
+  }
+  .chapters {
+    position: relative;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--bg-redbtnOpen);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  .selected-option {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-redbtnClose);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+
+    .option {
+      padding: 10px;
+      transition: 0.2s all;
+    }
+
+    .option:hover {
+      background-color: #b24949;
+    }
+    .option:active {
+      transform: scale(1.1);
+    }
+  }
+
+  .options.open {
+    display: block;
+  }
+
+  .custom-select-wrapper:hover {
+    transform: scale(1.05);
+  }
+}
+
+div {
+  // display: flex;
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .styled-table thead tr {
+    background-color: var(--bg-redbtnOpen);
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    max-width: 250px;
+    overflow-x: auto;
+  }
+
+  .styled-table tbody tr {
+    border-bottom: 1px solid var(--bg-redbtnClose);
+  }
+
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: var(--bg-block);
+  }
+
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--bg-redbtnClose);
+  }
+}

@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
     const storedManga = localStorage.getItem('openHeader');
     if (storedManga !== null) {
       this.showHeader = JSON.parse(storedManga);
-      console.log(this.showHeader);
     }
   }
 

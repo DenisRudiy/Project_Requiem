@@ -1,0 +1,75 @@
+@import "src/styles.scss";
+.Back {
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: rgba(80, 70, 70, 0);
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.Back:hover {
+  background-color: rgba(80, 70, 70, 100);
+}
+.Back:active {
+  transform: translateY(10px);
+}
+.reg_blok {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-block);
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    input {
+      width: 200px;
+      height: 40px;
+      outline: none;
+      border: 2px solid var(--bg-button);
+      border-radius: 5px;
+      font-family: "Rubik", sans-serif;
+      background-color: var(--bg-color);
+      color: white;
+      margin: 10px;
+    }
+
+    button {
+      width: 150px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background-color: var(--bg-redbtnOpen);
+      color: white;
+      font-family: "Rubik", sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.2s all;
+      margin-top: 30px;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: translateY(20px);
+    }
+  }
+}

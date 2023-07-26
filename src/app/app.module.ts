@@ -12,6 +12,8 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { TableModule } from 'primeng/table';
 
 // components
 import { AppComponent } from './app.component';
@@ -32,6 +34,9 @@ import { EditComponent } from './components/header/user/edit/edit.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DetailComponent } from './components/profile/detail/detail.component';
 import { FramesComponent } from './components/profile/detail/frames/frames.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { AdminPageComponent } from './components/admin-panel/admin-page/admin-page.component';
+import { GetComponent } from './components/admin-panel/admin-page/get/get.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +58,9 @@ import { FramesComponent } from './components/profile/detail/frames/frames.compo
     ProfileComponent,
     DetailComponent,
     FramesComponent,
+    AdminPanelComponent,
+    AdminPageComponent,
+    GetComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +75,8 @@ import { FramesComponent } from './components/profile/detail/frames/frames.compo
     RadioButtonModule,
     DropdownModule,
     FormsModule,
+    ScrollPanelModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

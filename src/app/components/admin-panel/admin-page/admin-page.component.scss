@@ -1,0 +1,54 @@
+@import "src/styles.scss";
+
+.field {
+  width: 100%;
+  padding: 10px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    button {
+      width: 150px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background-color: var(--bg-redbtnOpen);
+      color: white;
+      font-family: "Rubik", sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.2s all;
+      margin-top: 30px;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: translateY(20px);
+    }
+  }
+
+  .window {
+    margin: 15px;
+    height: auto;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+  .window {
+    display: flex;
+    flex-direction: column;
+    .options {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
