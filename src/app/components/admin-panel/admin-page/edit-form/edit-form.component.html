@@ -1,0 +1,219 @@
+<p-toast></p-toast>
+
+<div class="nav">
+  <button (click)="changeTableType('manga')" class="smallBtn">Add Manga</button>
+  <button (click)="changeTableType('chapter')" class="smallBtn">
+    Add Chapter
+  </button>
+  <button (click)="changeTableType('pages')" class="smallBtn">Add Pages</button>
+</div>
+
+<div *ngIf="tableType == 'manga'" class="manga">
+  <input type="text" maxlength="30" class="name" placeholder="Name" />
+  <input
+    type="text"
+    maxlength="255"
+    class="img"
+    placeholder="Img (url format)"
+  />
+  <input
+    type="text"
+    maxlength="255"
+    class="wallpaper"
+    placeholder="Wallpaper (url format)"
+  />
+  <div class="genres-wrapper">
+    <div class="selected-option">
+      Set Genres
+      <button
+        (click)="
+          switchDropdown(genresOpen, 'genres-wrapper'); genresOpen = !genresOpen
+        "
+      >
+        <i class="pi pi-plus-circle"></i>
+      </button>
+    </div>
+    <div class="options" [ngClass]="{ open: genresOpen }">
+      <div *ngFor="let item of genres" class="option">
+        <div>
+          <input
+            type="checkbox"
+            id="contactChoice1"
+            name="contact"
+            value="unchecked"
+            class="filt"
+            (click)="addToGenreList(item)"
+          />
+          <label for="contactChoice1">{{ item }}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="number" maxlength="255" class="rating" placeholder="Rating" />
+  <input type="number" maxlength="255" class="toms" placeholder="Toms" />
+  <textarea
+    type="text"
+    maxlength="555"
+    class="description"
+    placeholder="Description"
+  ></textarea>
+  <input type="text" maxlength="100" class="author" placeholder="Author" />
+  <input type="text" maxlength="30" class="status" placeholder="Status" />
+
+  <div class="group-dropdown">
+    <div class="preview-wrapper">
+      <div class="selected-option">
+        Set Preview Pages
+        <button
+          (click)="
+            switchDropdown(previewOpen, 'preview-wrapper');
+            previewOpen = !previewOpen
+          "
+        >
+          <i class="pi pi-plus-circle"></i>
+        </button>
+      </div>
+      <div class="options" [ngClass]="{ open: previewOpen }">
+        <input type="text" maxlength="255" class="img1" placeholder="Img 1" />
+        <input type="text" maxlength="255" class="img2" placeholder="Img 2" />
+        <input type="text" maxlength="255" class="img3" placeholder="Img 3" />
+        <input type="text" maxlength="255" class="img4" placeholder="Img 4" />
+      </div>
+    </div>
+
+    <div class="titles-wrapper">
+      <div class="selected-option">
+        Set Same Titles
+        <button
+          (click)="
+            switchDropdown(titlesOpen, 'titles-wrapper');
+            titlesOpen = !titlesOpen
+          "
+        >
+          <i class="pi pi-plus-circle"></i>
+        </button>
+      </div>
+      <div class="options" [ngClass]="{ open: titlesOpen }">
+        <input
+          type="number"
+          maxlength="255"
+          class="titles1"
+          placeholder="Title 1"
+        />
+        <input
+          type="number"
+          maxlength="255"
+          class="titles2"
+          placeholder="Title 2"
+        />
+        <input
+          type="number"
+          maxlength="255"
+          class="titles3"
+          placeholder="Title 3"
+        />
+        <input
+          type="number"
+          maxlength="255"
+          class="titles4"
+          placeholder="Title 4"
+        />
+      </div>
+    </div>
+  </div>
+
+  <button class="smallBtn" (click)="addManga()">Add</button>
+</div>
+<div *ngIf="tableType == 'chapter'" class="chapter">
+  <div
+    class="group-dropdown"
+    (click)="
+      switchDropdown(chapterOpen, 'chapter-wrapper'); chapterOpen = !chapterOpen
+    "
+  >
+    <div class="chapter-wrapper">
+      <div class="selected-option">Select Manga ID</div>
+      <div class="options" [ngClass]="{ open: chapterOpen }">
+        <div
+          *ngFor="let item of allMangaID"
+          class="option"
+          (click)="selectedManga = item"
+        >
+          <div class="choose">
+            {{ item }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input
+    type="number"
+    maxlength="100"
+    class="chapterNumber"
+    placeholder="Chapter Number"
+  />
+  <input
+    type="number"
+    maxlength="100"
+    class="chapterLength"
+    placeholder="Chapter Length"
+  />
+  <button class="smallBtn" (click)="addChapter()">Add</button>
+</div>
+<div *ngIf="tableType == 'pages'" class="pages">
+  <div class="group-dropdown">
+    <div
+      class="group-dropdown"
+      (click)="switchDropdown(pgManga, 'pg-manga-wrapper'); pgManga = !pgManga"
+    >
+      <div class="pg-manga-wrapper">
+        <div class="selected-option">Select Manga ID</div>
+        <div class="options" [ngClass]="{ open: pgManga }">
+          <div
+            *ngFor="let item of allMangaID"
+            class="option"
+            (click)="takeAllChapters(item)"
+          >
+            <div class="choose">
+              {{ item }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="group-dropdown"
+      (click)="
+        switchDropdown(pgChapter, 'pg-chapter-wrapper'); pgChapter = !pgChapter
+      "
+    >
+      <div class="pg-chapter-wrapper">
+        <div class="selected-option">Select Chapter Number</div>
+        <div class="options" [ngClass]="{ open: pgChapter }">
+          <div
+            *ngFor="let item of allMangaChapters"
+            class="option"
+            (click)="selectedChapter = item"
+          >
+            <div class="choose">
+              {{ item.chapterNumber }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input
+    type="number"
+    maxlength="100"
+    class="pageNumber"
+    placeholder="Page Number"
+  />
+  <input
+    type="text"
+    maxlength="500"
+    class="photoPage"
+    placeholder="Page Photo"
+  />
+  <button class="smallBtn" (click)="addPage()">Add</button>
+</div>

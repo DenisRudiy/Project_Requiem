@@ -15,7 +15,7 @@ export class ItemReviewComponent implements OnInit {
   allManga: Manga[] = [];
   mangaLength = 0;
   sameManga: Manga[] = [];
-  sameTitles: [] = [];
+  sameTitles: number[] = [];
   clickEventSubscription!: Subscription;
 
   // * constructor
@@ -48,6 +48,7 @@ export class ItemReviewComponent implements OnInit {
         }
       }
     });
+    console.log(this.currentManga.sameTitles, this.sameManga);
   }
 
   // * change manga

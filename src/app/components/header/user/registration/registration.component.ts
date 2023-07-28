@@ -104,6 +104,8 @@ export class RegistrationComponent implements OnInit {
         this.new_user.password = hashPassword1;
         this.new_user.status = 'logged';
         this.new_user.role = 'user';
+        this.new_user.lastRead = [];
+        this.new_user.favorite = [];
         this.new_user.photo = this.photo;
         this.service.createUser(this.new_user).subscribe((data) => {});
         this.service.setLogUser(this.new_user);

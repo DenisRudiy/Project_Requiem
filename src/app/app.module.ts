@@ -37,6 +37,7 @@ import { FramesComponent } from './components/profile/detail/frames/frames.compo
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { AdminPageComponent } from './components/admin-panel/admin-page/admin-page.component';
 import { GetComponent } from './components/admin-panel/admin-page/get/get.component';
+import { EditFormComponent } from './components/admin-panel/admin-page/edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { GetComponent } from './components/admin-panel/admin-page/get/get.compon
     AdminPanelComponent,
     AdminPageComponent,
     GetComponent,
+    EditFormComponent,
   ],
   imports: [
     BrowserModule,

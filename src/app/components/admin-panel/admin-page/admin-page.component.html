@@ -1,16 +1,20 @@
 <div class="field">
   <div>
     <button (click)="window = 'get'">Get data</button>
-    <button (click)="window = 'give'">Give role</button>
+    <button (click)="window = 'give'">Delete</button>
     <button (click)="window = 'edit'">Edit data</button>
   </div>
 
   <div *ngIf="window == ''" class="window">nothing</div>
   <div *ngIf="window == 'get'" class="window"></div>
   <div *ngIf="window == 'give'" class="window"></div>
-  <div *ngIf="window == 'edit'" class="window">edit</div>
+  <div *ngIf="window == 'edit'" class="window"></div>
 </div>
 
 <div>
   <app-get *ngIf="window == 'get'"></app-get>
+</div>
+
+<div>
+  <app-edit-form *ngIf="window == 'edit'"></app-edit-form>
 </div>

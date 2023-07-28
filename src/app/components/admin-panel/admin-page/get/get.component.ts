@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { Chapters } from 'src/app/interfaces/chapters';
 import { Manga } from 'src/app/interfaces/manga';
 import { User } from 'src/app/interfaces/user';
@@ -19,7 +19,8 @@ export class GetComponent implements OnInit {
 
   constructor(
     private service: MangaService,
-    private userService: UserService
+    private userService: UserService,
+    private el: ElementRef
   ) {}
 
   ngOnInit(): void {
@@ -48,5 +49,13 @@ export class GetComponent implements OnInit {
 
   chaptersDropdown() {
     this.chaptersOpen = !this.chaptersOpen;
+    const dropdown = this.el.nativeElement.querySelector(
+      '.custom-select-wrapper'
+    );
+    if (this.chaptersOpen == true) {
+      dropdown!.style.borderRadius = '5px 5px 0px 0px';
+    } else {
+      dropdown!.style.borderRadius = '5px';
+    }
   }
 }

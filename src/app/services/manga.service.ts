@@ -10,7 +10,7 @@ import { Pages } from '../interfaces/pages';
 })
 export class MangaService {
   // * variables
-  url = 'http://localhost:3000/manga';
+  url = 'http://localhost:3000';
   private currentManga = new Subject<Manga>();
 
   // * constructor
@@ -24,14 +24,29 @@ export class MangaService {
 
   // * CRUD functions
   getAll() {
-    return this.http.get<Manga[]>(this.url);
+    return this.http.get<Manga[]>(this.url + '/manga/get');
+  }
+  createManga(manga: Manga): Observable<Manga> {
+    return this.http.post<Manga>(`${this.url}/manga/create`, manga);
   }
 
-  getMangaChapters(id: number) {
-    return this.http.get<Chapters[]>(this.url + `/${id}`);
+  getAllMangaChapters() {
+    return this.http.get<Chapters[]>(this.url + '/chapters/get');
   }
+  getMangaChapters(id: number) {
+    return this.http.get<Chapters[]>(this.url + '/chapters/get' + `/${id}`);
+  }
+  createChapter(chapter: Chapters): Observable<Chapters> {
+    return this.http.post<Chapters>(`${this.url}/chapters/create`, chapter);
+  }
+
   getChapterParts(id: number, chapter_id: number) {
-    return this.http.get<Pages[]>(this.url + `/${id}/${chapter_id}`);
+    return this.http.get<Pages[]>(
+      this.url + '/chapters/get' + `/${id}/${chapter_id}`
+    );
+  }
+  createPage(page: Pages): Observable<Pages> {
+    return this.http.post<Pages>(`${this.url}/pages/create`, page);
   }
 
   // * get/set functions

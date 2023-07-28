@@ -28,7 +28,6 @@ export class AdminPanelComponent implements OnInit {
     const loggedUser = localStorage.getItem('chosenUser');
     if (loggedUser !== null) {
       this.loggedUser = JSON.parse(loggedUser);
-      console.log(this.loggedUser.role);
     }
   }
 

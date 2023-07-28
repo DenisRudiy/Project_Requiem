@@ -88,9 +88,7 @@
 
 @media only screen and (min-width: 1650px) and (max-width: 1980px) {
   .frames_page {
-    height: 60vw;
     .all_frames {
-      height: calc(60vw - 50px - 100px);
       display: grid;
       grid-template-columns: 18% 18% 18% 18% 18%;
       gap: 20px;
@@ -106,9 +104,7 @@
 }
 @media only screen and (min-width: 750px) and (max-width: 1650px) {
   .frames_page {
-    height: 95vw;
     .all_frames {
-      height: calc(95vw - 50px - 100px);
       display: grid;
       grid-template-columns: 32% 32% 32%;
       gap: 20px;
@@ -124,9 +120,7 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 750px) {
   .frames_page {
-    height: 440vw;
     .all_frames {
-      height: calc(440vw - 50px - 100px);
       display: grid;
       grid-template-columns: 90%;
       gap: 20px;

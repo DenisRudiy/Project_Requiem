@@ -1,0 +1,248 @@
+@import "src/styles.scss";
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.group-dropdown {
+  display: flex;
+  gap: 15px;
+}
+.smallBtn {
+  width: 70px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--bg-redbtnOpen);
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+.smallBtn:hover {
+  transform: scale(1.05);
+}
+.smallBtn:active {
+  transform: translateY(20px);
+}
+
+.chapter,
+.manga,
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .titles1,
+  .titles2,
+  .titles3,
+  .titles4 {
+    max-width: 167px;
+    width: 50vw;
+    min-width: 117px;
+    height: 40px;
+    outline: none;
+    border: 2px solid;
+    border-color: var(--bg-redbtnClose);
+    border-radius: 5px;
+    font-family: "Rubik", sans-serif;
+    background-color: var(--bg-color);
+    color: white;
+    font-weight: 600;
+    transition: 0.2s all;
+  }
+
+  .name,
+  .img,
+  .wallpaper,
+  .rating,
+  .toms,
+  .description,
+  .author,
+  .status,
+  .chapterNumber,
+  .chapterLength,
+  .pageNumber,
+  .photoPage {
+    max-width: 350px;
+    width: 50vw;
+    height: 40px;
+    min-width: 250px;
+    outline: none;
+    border: 2px solid;
+    border-color: var(--bg-redbtnClose);
+    border-radius: 5px;
+    font-family: "Rubik", sans-serif;
+    background-color: var(--bg-color);
+    color: white;
+    font-weight: 600;
+    transition: 0.2s all;
+  }
+  .description {
+    height: 90px;
+    resize: none;
+    max-width: 350px;
+    width: 50vw;
+    min-width: 250px;
+    outline: none;
+    border: 2px solid;
+    border-color: var(--bg-redbtnClose);
+    border-radius: 5px;
+    font-family: "Rubik", sans-serif;
+    background-color: var(--bg-color);
+    color: white;
+    font-weight: 600;
+    transition: 0.2s all;
+  }
+  .name:hover,
+  .img:hover,
+  .wallpaper:hover,
+  .rating:hover,
+  .toms:hover,
+  .description:hover,
+  .author:hover,
+  .status:hover,
+  .chapterNumber:hover,
+  .chapterLength:hover,
+  .pageNumber:hover,
+  .photoPage:hover {
+    transform: scale(1.05);
+  }
+}
+.preview-wrapper,
+.genres-wrapper,
+.titles-wrapper,
+.chapter-wrapper,
+.pg-manga-wrapper,
+.pg-chapter-wrapper {
+  position: relative;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: var(--bg-redbtnOpen);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.chapter-wrapper,
+.genres-wrapper {
+  max-width: 350px;
+  width: 50vw;
+  min-width: 250px;
+}
+
+.preview-wrapper,
+.titles-wrapper,
+.pg-manga-wrapper,
+.pg-chapter-wrapper {
+  max-width: 167px;
+  width: 50vw;
+  min-width: 117px;
+  text-align: center;
+}
+
+.chapters {
+  position: relative;
+  width: 70px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: var(--bg-redbtnOpen);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.selected-option {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 40px;
+  padding-left: 10px;
+
+  button {
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.2s all;
+  }
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.152);
+  }
+  button:active {
+    transform: translateY(10px);
+  }
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-redbtnClose);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+
+  .option {
+    padding: 10px;
+    transition: 0.2s all;
+
+    div {
+      margin: 5px;
+      label {
+        font-family: "Rubik", sans-serif;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      .filt {
+        accent-color: var(--bg-redbtnOpen);
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .filt:after {
+        background-color: var(--bg-button);
+      }
+    }
+  }
+  .option:hover {
+    background-color: var(--bg-redbtnOpen);
+  }
+  .option:active {
+    transform: scale(1.05);
+  }
+}
+
+.options.open {
+  display: block;
+}

@@ -94,6 +94,9 @@
   .custom-select-wrapper:hover {
     transform: scale(1.05);
   }
+  .custom-select-wrapper:active {
+    transform: translateY(20px);
+  }
 }
 
 div {
