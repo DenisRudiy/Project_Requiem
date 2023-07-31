@@ -31,6 +31,7 @@
   border-radius: 0px 0px 10px 10px;
   background-color: var(--bg-block);
   padding-top: 50px;
+  min-height: 1100px;
 
   .all_frames {
     display: grid;
@@ -47,6 +48,15 @@
         width: 11.5vw;
         height: 18vw;
         border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s all;
+        object-fit: cover;
+      }
+      img:hover {
+        transform: scale(1.05);
+      }
+      img:active {
+        transform: translateY(10px);
       }
     }
   }
@@ -157,5 +167,18 @@
   }
   .ngx-pagination {
     display: none !important;
+  }
+
+  .p-dialog-mask {
+    .p-dialog {
+      .p-dialog-header {
+        background: var(--bg-block);
+        color: white;
+      }
+      .p-dialog-content {
+        background: var(--bg-block);
+        color: white;
+      }
+    }
   }
 }

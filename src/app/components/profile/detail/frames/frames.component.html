@@ -13,7 +13,7 @@
           | paginate : { itemsPerPage: countOfTitles, currentPage: page }
       "
     >
-      <img src="{{ r }}" alt="" />
+      <img src="{{ r }}" alt="" (click)="openDialog(r)" />
     </div>
   </div>
   <div class="pagination">
@@ -26,3 +26,15 @@
     </button>
   </div>
 </div>
+
+<p-dialog
+  header=""
+  [(visible)]="dialog"
+  [style]="{ width: 'auto' }"
+  class="modal"
+  [modal]="true"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <img src="{{ currPage }}" alt="" />
+</p-dialog>

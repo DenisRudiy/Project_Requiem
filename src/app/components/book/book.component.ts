@@ -11,11 +11,15 @@ import { AddictionalService } from 'src/app/services/addictional.service';
 import { MangaService } from 'src/app/services/manga.service';
 import { Router } from '@angular/router';
 import { Chapters } from 'src/app/interfaces/chapters';
+import { UserService } from 'src/app/services/user.service';
+import { MessageService } from 'primeng/api';
+import { User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.scss'],
+  providers: [MessageService],
 })
 export class BookComponent implements OnInit {
   //* variables
@@ -32,13 +36,16 @@ export class BookComponent implements OnInit {
   startedChapter: number = 0;
   isLoading: boolean = false;
   countOfChapters: number = 1;
+  loggedUser!: User;
 
   // * constructor
   constructor(
     private addService: AddictionalService,
     private el: ElementRef,
     private service: MangaService,
-    private router: Router
+    private router: Router,
+    private userService: UserService,
+    private messageService: MessageService
   ) {}
 
   @ViewChildren('imageElements') imageElements: ElementRef[] = [];
@@ -47,6 +54,7 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {
     window.scrollTo(-1000, 0);
     this.addService.setHeader(false);
+
     const storedManga = localStorage.getItem('chosenManga');
     if (storedManga !== null) {
       this.currentManga = JSON.parse(storedManga);
@@ -60,6 +68,27 @@ export class BookComponent implements OnInit {
       this.startedChapter = 0;
     }
 
+    const currentUser = localStorage.getItem('chosenUser');
+    if (currentUser !== null) {
+      this.loggedUser = JSON.parse(currentUser);
+      if (this.loggedUser.status == 'unlogged') {
+        return;
+      } else {
+        let add = true;
+        for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
+          if (this.loggedUser.lastRead[i] == this.currentManga.id) {
+            add = false;
+            break;
+          }
+        }
+        if (add) {
+          this.loggedUser.lastRead.push(this.currentManga.id);
+          this.userService.updateUser(this.loggedUser).subscribe((data) => {
+            localStorage.setItem('chosenUser', JSON.stringify(this.loggedUser));
+          });
+        }
+      }
+    }
     this.service.getMangaChapters(this.currMangaId).subscribe((data) => {
       this.countOfChapters = data.length;
       this.allChapters = data;
@@ -128,14 +157,12 @@ export class BookComponent implements OnInit {
         this.page += 1;
         this.dropdownOpen = false;
         dropdown!.style.borderRadius = '5px';
-        console.log(this.page);
       }
     } else if (action === 1000) {
       if (this.page !== 1) {
         this.page -= 1;
         this.dropdownOpen = false;
         dropdown!.style.borderRadius = '5px';
-        console.log(this.page);
       } else {
         this.prevChapter();
       }
@@ -243,5 +270,41 @@ export class BookComponent implements OnInit {
     setTimeout(() => {
       this.isLoading = false;
     }, 1500);
+  }
+
+  // * Add Page to favorite
+  AddPageToLiked() {
+    if (this.loggedUser.status == 'unlogged' || this.loggedUser == undefined) {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: 'Please login to add page in favorite frames!',
+      });
+    } else {
+      let add = true;
+      for (let i = 0; i < this.loggedUser.favorite.length; i++) {
+        if (
+          this.allPhotoPages[this.page - 1].pageImage ==
+          this.loggedUser.favorite[i]
+        ) {
+          add = false;
+        }
+      }
+      if (add) {
+        this.loggedUser.favorite.push(
+          this.allPhotoPages[this.page - 1].pageImage
+        );
+        this.userService.updateUser(this.loggedUser).subscribe((data) => {
+          localStorage.setItem('chosenUser', JSON.stringify(this.loggedUser));
+        });
+      } else {
+        this.messageService.add({
+          severity: 'info',
+          summary: 'Info',
+          detail: 'You already add this image to favorites',
+        });
+      }
+      console.log(this.loggedUser);
+    }
   }
 }

@@ -11,5 +11,5 @@ export class Manga {
   status!: string;
   preview!: string[];
   sameTitles!: any[];
-  parts!: [];
+  parts!: any[];
 }

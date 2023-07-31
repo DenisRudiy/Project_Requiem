@@ -26,6 +26,9 @@ export class MangaService {
   getAll() {
     return this.http.get<Manga[]>(this.url + '/manga/get');
   }
+  getMangaByID(id: number) {
+    return this.http.get<Manga[]>(this.url + '/manga/get' + `/${id}`);
+  }
   createManga(manga: Manga): Observable<Manga> {
     return this.http.post<Manga>(`${this.url}/manga/create`, manga);
   }

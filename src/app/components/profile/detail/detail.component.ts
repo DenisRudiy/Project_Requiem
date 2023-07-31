@@ -29,14 +29,14 @@ export class DetailComponent implements OnInit {
         this.loggedUser.favorite = [];
         this.loggedUser.lastRead = [];
         this.loggedUser = data;
-        console.log(this.loggedUser);
         if (this.loggedUser.status == 'logged') {
-          this.userManga = [];
-          this.mangaService.getAll().subscribe((data) => {
-            for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
-              this.userManga.push(data[this.loggedUser.lastRead[i]]);
-            }
-          });
+          for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
+            this.mangaService
+              .getMangaByID(this.loggedUser.lastRead[i])
+              .subscribe((data) => {
+                this.userManga.push(data[0]);
+              });
+          }
           this.detail_page = 'details';
         } else {
           this.detail_page = 'none';
@@ -53,11 +53,13 @@ export class DetailComponent implements OnInit {
         this.detail_page = 'none';
       }
     }
-    this.mangaService.getAll().subscribe((data) => {
-      for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
-        this.userManga.push(data[this.loggedUser.lastRead[i]]);
-      }
-    });
+    for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
+      this.mangaService
+        .getMangaByID(this.loggedUser.lastRead[i])
+        .subscribe((data) => {
+          this.userManga.push(data[0]);
+        });
+    }
   }
 
   clickRight() {

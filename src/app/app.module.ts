@@ -10,10 +10,10 @@ import { CommonModule } from '@angular/common';
 import { ToastModule } from 'primeng/toast';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { RadioButtonModule } from 'primeng/radiobutton';
-import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
 
 // components
 import { AppComponent } from './app.component';
@@ -75,10 +75,10 @@ import { EditFormComponent } from './components/admin-panel/admin-page/edit-form
     ToastModule,
     OverlayPanelModule,
     RadioButtonModule,
-    DropdownModule,
     FormsModule,
     ScrollPanelModule,
     TableModule,
+    DialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
