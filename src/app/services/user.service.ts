@@ -8,7 +8,7 @@ import { User } from '../interfaces/user';
 })
 export class UserService {
   // * variables
-  url = 'http://localhost:3000/users';
+  url = 'https://requiembackend.azurewebsites.net/users';
   private loggedUser = new Subject<User>();
   private subject = new Subject<any>();
 
