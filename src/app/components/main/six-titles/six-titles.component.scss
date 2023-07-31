@@ -113,9 +113,32 @@
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 900px) {
+@media only screen and (min-width: 557px) and (max-width: 900px) {
   .six-titles {
     height: 440vw;
+    .titles {
+      grid-template-columns: 75%;
+      gap: 20px;
+      height: 96%;
+      .manga {
+        .overlay {
+          width: calc(40vw + 20px);
+          height: calc(60vw + 40px);
+          img {
+            width: 40vw;
+            height: 60vw;
+          }
+        }
+      }
+    }
+    .btn-titles {
+      height: 4%;
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 557px) {
+  .six-titles {
+    height: 500vw;
     .titles {
       grid-template-columns: 75%;
       gap: 20px;

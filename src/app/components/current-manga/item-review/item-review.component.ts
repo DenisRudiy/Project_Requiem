@@ -48,7 +48,6 @@ export class ItemReviewComponent implements OnInit {
         }
       }
     });
-    console.log(this.currentManga.sameTitles, this.sameManga);
   }
 
   // * change manga

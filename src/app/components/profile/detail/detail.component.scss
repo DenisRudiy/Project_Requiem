@@ -6,6 +6,7 @@
   min-height: 1150px;
   border-radius: 10px;
   background-color: var(--bg-block);
+  z-index: 1500;
 
   .about_user {
     width: 100%;
@@ -259,7 +260,36 @@
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1650px) {
+@media only screen and (min-width: 557px) and (max-width: 1650px) {
+  .details {
+    height: 1500px;
+    .about_user {
+      .user_card {
+        height: 150px;
+        .logo {
+          img {
+            width: 150px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 100%;
+      .last_read {
+        width: 100%;
+        height: calc(1150 / 2);
+      }
+      .favorite_frames {
+        width: 100%;
+        height: calc(1150 / 2);
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 557px) {
   .details {
     height: 1500px;
     .about_user {

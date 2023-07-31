@@ -2,8 +2,14 @@
   padding: 0px 50px 0px 300px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1500px) {
+@media only screen and (min-width: 577px) and (max-width: 1500px) {
   .current-manga {
     padding: 0px 80px 0px 80px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 577px) {
+  .current-manga {
+    padding: 0px 0px 0px 0px;
   }
 }

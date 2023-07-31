@@ -151,12 +151,25 @@
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 900px) {
+@media only screen and (min-width: 557px) and (max-width: 900px) {
   .promo {
+    flex-direction: column;
     .promo_logo {
       img {
         margin-top: 30px;
         width: 60vw;
+        height: auto;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 557px) {
+  .promo {
+    flex-direction: column;
+    .promo_logo {
+      img {
+        margin-top: 30px;
+        width: 90vw;
         height: auto;
       }
     }
