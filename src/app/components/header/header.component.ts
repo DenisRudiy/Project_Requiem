@@ -31,6 +31,11 @@ export class HeaderComponent implements OnInit {
     this.clickEventSubscription = this.service.getClickEvent().subscribe(() => {
       this.ExitHeader('open');
     });
+    this.clickEventSubscription = this.addService
+      .getCloseHeader()
+      .subscribe(() => {
+        this.ExitHeader('');
+      });
   }
 
   // * ngOnInit

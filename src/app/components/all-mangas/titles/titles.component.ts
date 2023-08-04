@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Manga } from 'src/app/interfaces/manga';
+import { AddictionalService } from 'src/app/services/addictional.service';
 import { MangaService } from 'src/app/services/manga.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-titles',
@@ -17,7 +19,11 @@ export class TitlesComponent implements OnInit {
   names: string[] = [];
 
   // * constructor
-  constructor(private service: MangaService, private el: ElementRef) {}
+  constructor(
+    private service: MangaService,
+    private el: ElementRef,
+    private addService: AddictionalService
+  ) {}
 
   // * ngOnInit
   ngOnInit(): void {
@@ -81,6 +87,7 @@ export class TitlesComponent implements OnInit {
         search!.classList.remove('bounce');
       }, 200);
     }
+    this.addService.setCloseHeader();
   }
 
   // * hide search block

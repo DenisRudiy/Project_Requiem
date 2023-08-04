@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Manga } from 'src/app/interfaces/manga';
+import { AddictionalService } from 'src/app/services/addictional.service';
 import { MangaService } from 'src/app/services/manga.service';
 
 @Component({
@@ -13,7 +14,11 @@ export class PromoComponent implements OnInit {
   names: string[] = [];
 
   // * constructor
-  constructor(private service: MangaService, private el: ElementRef) {}
+  constructor(
+    private service: MangaService,
+    private el: ElementRef,
+    private addService: AddictionalService
+  ) {}
 
   // * ngOnInit
   ngOnInit(): void {
@@ -48,6 +53,7 @@ export class PromoComponent implements OnInit {
         search!.classList.remove('bounce');
       }, 200);
     }
+    this.addService.setCloseHeader();
   }
 
   // * hide search field

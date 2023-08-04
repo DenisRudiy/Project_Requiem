@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
-  z-index: 5;
+  z-index: 1800;
 }
 .filter_block {
   div {
@@ -50,7 +50,7 @@
   margin-bottom: 50px;
 
   .search-field {
-    z-index: 5;
+    z-index: 2000;
     .find {
       width: 43vw;
       height: 60px;

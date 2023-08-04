@@ -218,10 +218,12 @@ export class EditFormComponent implements OnInit {
         });
       } else {
         this.newPage.manga_id = this.selectedManga;
-        this.newPage.chapter_id = this.selectedChapter.id;
+        this.newPage.chapterNumber = this.selectedChapter.chapterNumber;
         this.newPage.pageNumber = parseInt(pageNumber.value);
         this.newPage.pageImage = photoPage.value;
         this.service.createPage(this.newPage).subscribe((data) => {});
+        this.el.nativeElement.querySelector('.pageNumber').value = 0;
+        this.el.nativeElement.querySelector('.photoPage').value = '';
       }
     }
   }

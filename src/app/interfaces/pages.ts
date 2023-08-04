@@ -1,6 +1,6 @@
 export class Pages {
   manga_id!: number;
-  chapter_id!: number;
+  chapterNumber!: number;
   pageNumber!: number;
   pageImage!: string;
 }

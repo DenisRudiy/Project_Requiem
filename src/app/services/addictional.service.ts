@@ -6,6 +6,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class AddictionalService {
   private isOpenHeader = new Subject<boolean>();
+  private subject = new Subject<any>();
 
   constructor() {
     const isOpenHeader = localStorage.getItem('openHeader');
@@ -23,5 +24,13 @@ export class AddictionalService {
 
   getHeader(): Observable<boolean> {
     return this.isOpenHeader.asObservable();
+  }
+
+  setCloseHeader() {
+    this.subject.next(1);
+  }
+
+  getCloseHeader(): Observable<any> {
+    return this.subject.asObservable();
   }
 }
