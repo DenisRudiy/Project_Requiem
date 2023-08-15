@@ -7,7 +7,7 @@
 
 <p align="center">
   
-[![My Skills](https://skillicons.dev/icons?i=ts,html,css,angular,azure,express,github,sass,vscode)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=ts,html,css,angular,azure,express,github,sass,vscode,mysql)](https://skillicons.dev)
 
 </p>
 
@@ -17,7 +17,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-You can push this project or try by yourself by link: `https://requiemfrontend.azurewebsites.net/`
+<p>
+You can push this project or try by yourself by [link](https://requiemfrontend.azurewebsites.net)
+</p>
 
 ## Main Page
 <img src="readme_assets/main.png">
