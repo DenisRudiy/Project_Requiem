@@ -19,6 +19,8 @@
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white">
 </p>
 
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
 
 ## Development server
