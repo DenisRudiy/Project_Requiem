@@ -7,19 +7,10 @@
 
 <p align="center">
   
+[![My Skills](https://skillicons.dev/icons?i=ts,html,css,angular,azure,express,github,sass,vscode)](https://skillicons.dev)
 
-<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" >
-
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-
-<img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" >
-
-<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
-
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white">
 </p>
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
 
