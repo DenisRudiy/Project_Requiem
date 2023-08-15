@@ -17,3 +17,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You can push this project or try by yourself by link: `https://requiemfrontend.azurewebsites.net/`
+
+## Main Page
+<img src="readme_assets/main.png">
+
+## Page with all titles
+<img src="readme_assets/all.png">
+
+## Current manga page
+<img src="readme_assets/manga_details.png">
+
+## Book
+<img src="readme_assets/manga_panel.png">
+
+## Profile page
+<img src="readme_assets/profile.png">
