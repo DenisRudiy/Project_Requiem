@@ -195,6 +195,7 @@ export class EditFormComponent implements OnInit {
     }
   }
 
+  // * Create New Page
   addPage() {
     const pageNumber = this.el.nativeElement.querySelector('.pageNumber');
     const photoPage = this.el.nativeElement.querySelector('.photoPage');

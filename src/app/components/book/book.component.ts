@@ -74,14 +74,7 @@ export class BookComponent implements OnInit {
       if (this.loggedUser.status == 'unlogged') {
         return;
       } else {
-        let add = true;
-        for (let i = 0; i < this.loggedUser.lastRead.length; i++) {
-          if (this.loggedUser.lastRead[i] == this.currentManga.id) {
-            add = false;
-            break;
-          }
-        }
-        if (add) {
+        if (!this.loggedUser.lastRead.includes(this.currentManga.id)) {
           this.loggedUser.lastRead.push(this.currentManga.id);
           this.userService.updateUser(this.loggedUser).subscribe((data) => {
             localStorage.setItem('chosenUser', JSON.stringify(this.loggedUser));
@@ -175,6 +168,7 @@ export class BookComponent implements OnInit {
   // * Reset Page
   resetPage() {
     sessionStorage.setItem('currentPage', JSON.stringify(1));
+    sessionStorage.setItem('currentChapter', JSON.stringify(0));
     this.router.navigate(['/currentManga']);
   }
 
